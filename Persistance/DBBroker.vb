@@ -38,7 +38,7 @@ Public Class DBBroker
         Disconnect()
         Return result
     End Function
-    Overrides 
+
     Public Function Change(sql As String) As Integer
         Dim com As New MySql.Data.MySqlClient.MySqlCommand(sql, DBBroker.connection)
         Dim result As Integer
@@ -66,4 +66,4 @@ Public Class DBBroker
     End Sub
 
 End Class
-End Class
+
