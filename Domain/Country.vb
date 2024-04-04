@@ -1,6 +1,7 @@
 ﻿Public Class Country
-    Property countyID As String
-    Property countryName As String
-    Property countryPopulation As Integer
+    Public Property countyID As String
+    Public Property countryName As String
+    Public Property countryPopulation As Integer
+    Public ReadOnly Property countryDAO As CountryDAO
 
 End Class
