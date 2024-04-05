@@ -1,7 +1,7 @@
 ﻿Public Class GP
-    Public Property gpID As Integer
-    Public Property gpName As String
-    Public Property gpCountry As Country
+    Public Property GPID As Integer
+    Public Property GPName As String
+    Public Property GPCountry As Country
     Public ReadOnly Property gpDAO As GPDAO
 
 

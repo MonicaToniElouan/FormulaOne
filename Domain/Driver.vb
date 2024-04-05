@@ -1,8 +1,8 @@
 ﻿Public Class Driver
-    Public Property driverID As Integer
-    Public Property driverName As String
-    Public Property driverSurname As String
-    Public Property driverCountry As Country
-    Public ReadOnly Property driverDAO As DriverDAO
+    Public Property DriverID As Integer
+    Public Property DriverName As String
+    Public Property DriverSurname As String
+    Public Property DriverCountry As Country
+    Public ReadOnly Property DriverDAO As DriverDAO
 
 End Class

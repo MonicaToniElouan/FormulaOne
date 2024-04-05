@@ -1,8 +1,17 @@
 ﻿Public Class Team
-    Public Property teamID As Integer
-    Public Property teamName As String
-    Public Property teamCountry As Country
-    Public Property creationDate As Date
-    Public ReadOnly Property teamDAO As TeamDAO
+    Public Property TeamID As Integer
+    Public Property TeamName As String
+    Public Property TeamCountry As Country
+    Public Property CreationDate As Date
+    Public ReadOnly Property TeamDAO As TeamDAO
+    Public Sub New(id As Integer, name As String, country As Country, creationDate As Date)
+        Me.TeamID = id
+        Me.TeamName = name
+        Me.TeamCountry = country
+        Me.CreationDate = creationDate
+        Me.TeamDAO = New TeamDAO
+    End Sub
+
+
 
 End Class
