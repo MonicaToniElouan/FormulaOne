@@ -15,9 +15,27 @@
         Me.CountryDAO = New CountryDAO
     End Sub
 
+    Public Sub ReadAllCountries()
+        Me.CountryDAO.ReadAll()
+    End Sub
+
     Public Function ReadCountry()
         Me.CountryDAO.Read(Me)
         Return Me
     End Function
+
+    Public Function InsertCountry()
+        Return Me.CountryDAO.Insert(Me)
+    End Function
+
+    Public Function UpdateCountry()
+        Return Me.CountryDAO.Update(Me)
+    End Function
+
+    Public Function DeleteCountry()
+        Return Me.CountryDAO.Delete(Me)
+    End Function
+
+
 
 End Class

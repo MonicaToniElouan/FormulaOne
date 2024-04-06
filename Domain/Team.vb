@@ -17,8 +17,25 @@
         Me.TeamDAO = New TeamDAO
     End Sub
 
-    Public Sub ReadTeam()
-        Me.TeamDAO.Read(Me)
+    Public Sub ReadAllTeams()
+        Me.TeamDAO.ReadAll()
     End Sub
+
+    Public Function ReadTeam()
+        Me.TeamDAO.Read(Me)
+        Return Me
+    End Function
+
+    Public Function InsertTeam()
+        Return Me.TeamDAO.Insert(Me)
+    End Function
+
+    Public Function UpdateTeam()
+        Return Me.TeamDAO.Update(Me)
+    End Function
+
+    Public Function DeleteTeam()
+        Return Me.TeamDAO.Delete(Me)
+    End Function
 
 End Class

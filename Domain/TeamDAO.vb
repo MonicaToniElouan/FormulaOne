@@ -32,14 +32,14 @@ Public Class TeamDAO
     End Sub
 
     Public Function Insert(ByVal t As Team) As Integer
-        'Return DBBroker.GetBroker.Change("INSERT INTO Persons VALUES ('" & p.PersonID & "', '" & p.PersonName & "');")
+        Return DBBroker.GetBroker.Change("INSERT INTO Teams VALUES (" & t.TeamID & ", '" & t.TeamName & "', '" & t.TeamCountry.CountryID & "', '" & t.CreationDate.ToString("yyyy-MM-dd") & "');")
     End Function
 
     Public Function Update(ByVal t As Team) As Integer
-        'Return DBBroker.GetBroker.Change("UPDATE Persons SET PersonName='" & p.PersonName & "' WHERE PersonID='" & p.PersonID & "';")
+        Return DBBroker.GetBroker.Change("UPDATE Teams SET TeamName='" & t.TeamName & "', TeamCountry='" & t.TeamCountry.CountryID & "', CreationDate='" & t.CreationDate.ToString("yyyy-MM-dd") & "' WHERE TeamID='" & t.TeamID & "';")
     End Function
 
     Public Function Delete(ByVal t As Team) As Integer
-        'Return DBBroker.GetBroker.Change("DELETE FROM Persons WHERE PersonID='" & p.PersonID & "';")
+        Return DBBroker.GetBroker.Change("DELETE FROM Teams WHERE TeamID='" & t.TeamID & "';")
     End Function
 End Class
