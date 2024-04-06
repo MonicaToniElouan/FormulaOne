@@ -9,34 +9,37 @@ Public Class TeamDAO
 
     Public Sub ReadAll()
         Dim t As Team
-        Dim country As CountryDAO
+        Dim c As Country
         Dim col, aux As Collection
         col = DBBroker.GetBroker().Read("SELECT * FROM Teams ORDER BY TeamID")
         For Each aux In col
-
-            t = New Team(aux(1).ToString, aux(2).ToString, )
-            p.PersonName = aux(2).ToString
-            Me.Persons.Add(p)
+            c = New Country(aux(3).ToString)
+            t = New Team(aux(1).ToString, aux(2).ToString, c.ReadCountry(), Date.Parse(aux(4).ToString))
+            Me.Teams.Add(t)
         Next
     End Sub
 
-    Public Sub Read(ByRef p As Person)
+    Public Sub Read(ByRef t As Team)
         Dim col As Collection : Dim aux As Collection
-        col = DBBroker.GetBroker.Read("SELECT * FROM Persons WHERE PersonID='" & p.PersonID & "';")
+        Dim c As Country
+        col = DBBroker.GetBroker.Read("SELECT * FROM Teams WHERE TeamID='" & t.TeamID & "';")
         For Each aux In col
-            p.PersonName = aux(2).ToString
+            c = New Country(aux(3).ToString)
+            t.TeamName = aux(1).ToString
+            t.TeamCountry = c.ReadCountry()
+            t.CreationDate = Date.Parse(aux(4).ToString)
         Next
     End Sub
 
-    Public Function Insert(ByVal p As Person) As Integer
-        Return DBBroker.GetBroker.Change("INSERT INTO Persons VALUES ('" & p.PersonID & "', '" & p.PersonName & "');")
+    Public Function Insert(ByVal t As Team) As Integer
+        'Return DBBroker.GetBroker.Change("INSERT INTO Persons VALUES ('" & p.PersonID & "', '" & p.PersonName & "');")
     End Function
 
-    Public Function Update(ByVal p As Person) As Integer
-        Return DBBroker.GetBroker.Change("UPDATE Persons SET PersonName='" & p.PersonName & "' WHERE PersonID='" & p.PersonID & "';")
+    Public Function Update(ByVal t As Team) As Integer
+        'Return DBBroker.GetBroker.Change("UPDATE Persons SET PersonName='" & p.PersonName & "' WHERE PersonID='" & p.PersonID & "';")
     End Function
 
-    Public Function Delete(ByVal p As Person) As Integer
-        Return DBBroker.GetBroker.Change("DELETE FROM Persons WHERE PersonID='" & p.PersonID & "';")
+    Public Function Delete(ByVal t As Team) As Integer
+        'Return DBBroker.GetBroker.Change("DELETE FROM Persons WHERE PersonID='" & p.PersonID & "';")
     End Function
 End Class
