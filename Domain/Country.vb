@@ -4,6 +4,9 @@
     Public Property CountryPopulation As Integer
     Public ReadOnly Property CountryDAO As CountryDAO
 
+    Public Sub New()
+        Me.CountryDAO = New CountryDAO
+    End Sub
     Public Sub New(id As String)
         Me.CountryID = id
         Me.CountryDAO = New CountryDAO
