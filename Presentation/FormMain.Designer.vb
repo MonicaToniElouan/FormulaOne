@@ -28,7 +28,14 @@ Partial Class FormMain
         lblConnect = New Label()
         lblResultConnection = New Label()
         pnlConn = New Panel()
+        pnlSeason = New Panel()
+        pnlModifyData = New Panel()
+        btnCountries = New Button()
+        Button1 = New Button()
+        Button2 = New Button()
+        Button3 = New Button()
         pnlConn.SuspendLayout()
+        pnlModifyData.SuspendLayout()
         SuspendLayout()
         ' 
         ' lblWelcome
@@ -44,11 +51,12 @@ Partial Class FormMain
         ' 
         ' btnConnect
         ' 
-        btnConnect.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        btnConnect.Anchor = AnchorStyles.None
         btnConnect.FlatStyle = FlatStyle.System
-        btnConnect.Location = New Point(251, 64)
+        btnConnect.ForeColor = SystemColors.ActiveCaptionText
+        btnConnect.Location = New Point(255, 58)
         btnConnect.Name = "btnConnect"
-        btnConnect.Size = New Size(180, 44)
+        btnConnect.Size = New Size(180, 47)
         btnConnect.TabIndex = 1
         btnConnect.Text = "Connect DataBase"
         btnConnect.UseVisualStyleBackColor = True
@@ -64,7 +72,7 @@ Partial Class FormMain
         ' 
         lblConnect.AutoSize = True
         lblConnect.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblConnect.Location = New Point(123, 17)
+        lblConnect.Location = New Point(155, 10)
         lblConnect.Name = "lblConnect"
         lblConnect.Size = New Size(399, 21)
         lblConnect.TabIndex = 2
@@ -75,11 +83,11 @@ Partial Class FormMain
         lblResultConnection.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblResultConnection.AutoSize = True
         lblResultConnection.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblResultConnection.Location = New Point(314, 143)
+        lblResultConnection.Location = New Point(312, 132)
         lblResultConnection.Name = "lblResultConnection"
-        lblResultConnection.Size = New Size(53, 20)
+        lblResultConnection.Size = New Size(68, 20)
         lblResultConnection.TabIndex = 3
-        lblResultConnection.Text = "Label2"
+        lblResultConnection.Text = "Message"
         lblResultConnection.TextAlign = ContentAlignment.MiddleCenter
         lblResultConnection.Visible = False
         ' 
@@ -90,20 +98,77 @@ Partial Class FormMain
         pnlConn.Controls.Add(btnConnect)
         pnlConn.Location = New Point(62, 90)
         pnlConn.Name = "pnlConn"
-        pnlConn.Size = New Size(676, 194)
+        pnlConn.Size = New Size(676, 161)
         pnlConn.TabIndex = 4
         ' 
-        ' Form1
+        ' pnlSeason
+        ' 
+        pnlSeason.Location = New Point(62, 274)
+        pnlSeason.Name = "pnlSeason"
+        pnlSeason.Size = New Size(322, 155)
+        pnlSeason.TabIndex = 5
+        ' 
+        ' pnlModifyData
+        ' 
+        pnlModifyData.Controls.Add(Button3)
+        pnlModifyData.Controls.Add(Button2)
+        pnlModifyData.Controls.Add(Button1)
+        pnlModifyData.Controls.Add(btnCountries)
+        pnlModifyData.Location = New Point(418, 274)
+        pnlModifyData.Name = "pnlModifyData"
+        pnlModifyData.Size = New Size(320, 155)
+        pnlModifyData.TabIndex = 6
+        ' 
+        ' btnCountries
+        ' 
+        btnCountries.Location = New Point(39, 42)
+        btnCountries.Name = "btnCountries"
+        btnCountries.Size = New Size(115, 50)
+        btnCountries.TabIndex = 0
+        btnCountries.Text = "Countries"
+        btnCountries.UseVisualStyleBackColor = True
+        ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(158, 42)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(115, 50)
+        Button1.TabIndex = 1
+        Button1.Text = "Countries"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(39, 98)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(115, 50)
+        Button2.TabIndex = 2
+        Button2.Text = "Countries"
+        Button2.UseVisualStyleBackColor = True
+        ' 
+        ' Button3
+        ' 
+        Button3.Location = New Point(158, 98)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(115, 50)
+        Button3.TabIndex = 3
+        Button3.Text = "Countries"
+        Button3.UseVisualStyleBackColor = True
+        ' 
+        ' FormMain
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(pnlModifyData)
+        Controls.Add(pnlSeason)
         Controls.Add(pnlConn)
         Controls.Add(lblWelcome)
-        Name = "Form1"
+        Name = "FormMain"
         Text = "Form1"
         pnlConn.ResumeLayout(False)
         pnlConn.PerformLayout()
+        pnlModifyData.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -114,5 +179,11 @@ Partial Class FormMain
     Friend WithEvents lblConnect As Label
     Friend WithEvents lblResultConnection As Label
     Friend WithEvents pnlConn As Panel
+    Friend WithEvents pnlSeason As Panel
+    Friend WithEvents pnlModifyData As Panel
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents btnCountries As Button
 
 End Class
