@@ -31,9 +31,10 @@ Partial Class FormMain
         pnlSeason = New Panel()
         pnlModifyData = New Panel()
         btnCountries = New Button()
-        Button1 = New Button()
-        Button2 = New Button()
-        Button3 = New Button()
+        btnTeams = New Button()
+        btnDrivers = New Button()
+        btnGPs = New Button()
+        Label1 = New Label()
         pnlConn.SuspendLayout()
         pnlModifyData.SuspendLayout()
         SuspendLayout()
@@ -110,9 +111,10 @@ Partial Class FormMain
         ' 
         ' pnlModifyData
         ' 
-        pnlModifyData.Controls.Add(Button3)
-        pnlModifyData.Controls.Add(Button2)
-        pnlModifyData.Controls.Add(Button1)
+        pnlModifyData.Controls.Add(Label1)
+        pnlModifyData.Controls.Add(btnGPs)
+        pnlModifyData.Controls.Add(btnDrivers)
+        pnlModifyData.Controls.Add(btnTeams)
         pnlModifyData.Controls.Add(btnCountries)
         pnlModifyData.Location = New Point(418, 274)
         pnlModifyData.Name = "pnlModifyData"
@@ -128,32 +130,41 @@ Partial Class FormMain
         btnCountries.Text = "Countries"
         btnCountries.UseVisualStyleBackColor = True
         ' 
-        ' Button1
+        ' btnTeams
         ' 
-        Button1.Location = New Point(158, 42)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(115, 50)
-        Button1.TabIndex = 1
-        Button1.Text = "Countries"
-        Button1.UseVisualStyleBackColor = True
+        btnTeams.Location = New Point(158, 42)
+        btnTeams.Name = "btnTeams"
+        btnTeams.Size = New Size(115, 50)
+        btnTeams.TabIndex = 1
+        btnTeams.Text = "Teams"
+        btnTeams.UseVisualStyleBackColor = True
         ' 
-        ' Button2
+        ' btnDrivers
         ' 
-        Button2.Location = New Point(39, 98)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(115, 50)
-        Button2.TabIndex = 2
-        Button2.Text = "Countries"
-        Button2.UseVisualStyleBackColor = True
+        btnDrivers.Location = New Point(39, 98)
+        btnDrivers.Name = "btnDrivers"
+        btnDrivers.Size = New Size(115, 50)
+        btnDrivers.TabIndex = 2
+        btnDrivers.Text = "Drivers"
+        btnDrivers.UseVisualStyleBackColor = True
         ' 
-        ' Button3
+        ' btnGPs
         ' 
-        Button3.Location = New Point(158, 98)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(115, 50)
-        Button3.TabIndex = 3
-        Button3.Text = "Countries"
-        Button3.UseVisualStyleBackColor = True
+        btnGPs.Location = New Point(158, 98)
+        btnGPs.Name = "btnGPs"
+        btnGPs.Size = New Size(115, 50)
+        btnGPs.TabIndex = 3
+        btnGPs.Text = "GPs"
+        btnGPs.UseVisualStyleBackColor = True
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(100, 14)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(118, 15)
+        Label1.TabIndex = 4
+        Label1.Text = "Data you can change"
         ' 
         ' FormMain
         ' 
@@ -169,6 +180,7 @@ Partial Class FormMain
         pnlConn.ResumeLayout(False)
         pnlConn.PerformLayout()
         pnlModifyData.ResumeLayout(False)
+        pnlModifyData.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -181,9 +193,10 @@ Partial Class FormMain
     Friend WithEvents pnlConn As Panel
     Friend WithEvents pnlSeason As Panel
     Friend WithEvents pnlModifyData As Panel
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnGPs As Button
+    Friend WithEvents btnDrivers As Button
+    Friend WithEvents btnTeams As Button
     Friend WithEvents btnCountries As Button
+    Friend WithEvents Label1 As Label
 
 End Class
