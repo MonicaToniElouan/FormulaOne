@@ -23,18 +23,16 @@ Partial Class FormMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         lblWelcome = New Label()
-        btnConnect = New Button()
         MySqlCommand1 = New MySql.Data.MySqlClient.MySqlCommand()
-        lblConnect = New Label()
         lblResultConnection = New Label()
         pnlConn = New Panel()
         pnlSeason = New Panel()
         pnlModifyData = New Panel()
-        btnCountries = New Button()
-        btnTeams = New Button()
-        btnDrivers = New Button()
-        btnGPs = New Button()
         Label1 = New Label()
+        btnGPs = New Button()
+        btnDrivers = New Button()
+        btnTeams = New Button()
+        btnCountries = New Button()
         pnlConn.SuspendLayout()
         pnlModifyData.SuspendLayout()
         SuspendLayout()
@@ -50,18 +48,6 @@ Partial Class FormMain
         lblWelcome.Text = "Welcome To Formula One System"
         lblWelcome.TextAlign = ContentAlignment.TopCenter
         ' 
-        ' btnConnect
-        ' 
-        btnConnect.Anchor = AnchorStyles.None
-        btnConnect.FlatStyle = FlatStyle.System
-        btnConnect.ForeColor = SystemColors.ActiveCaptionText
-        btnConnect.Location = New Point(255, 58)
-        btnConnect.Name = "btnConnect"
-        btnConnect.Size = New Size(180, 47)
-        btnConnect.TabIndex = 1
-        btnConnect.Text = "Connect DataBase"
-        btnConnect.UseVisualStyleBackColor = True
-        ' 
         ' MySqlCommand1
         ' 
         MySqlCommand1.CacheAge = 0
@@ -69,22 +55,12 @@ Partial Class FormMain
         MySqlCommand1.EnableCaching = False
         MySqlCommand1.Transaction = Nothing
         ' 
-        ' lblConnect
-        ' 
-        lblConnect.AutoSize = True
-        lblConnect.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblConnect.Location = New Point(155, 10)
-        lblConnect.Name = "lblConnect"
-        lblConnect.Size = New Size(399, 21)
-        lblConnect.TabIndex = 2
-        lblConnect.Text = "To use the application you need to connect the data base"
-        ' 
         ' lblResultConnection
         ' 
         lblResultConnection.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblResultConnection.AutoSize = True
         lblResultConnection.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblResultConnection.Location = New Point(312, 132)
+        lblResultConnection.Location = New Point(297, 12)
         lblResultConnection.Name = "lblResultConnection"
         lblResultConnection.Size = New Size(68, 20)
         lblResultConnection.TabIndex = 3
@@ -95,16 +71,14 @@ Partial Class FormMain
         ' pnlConn
         ' 
         pnlConn.Controls.Add(lblResultConnection)
-        pnlConn.Controls.Add(lblConnect)
-        pnlConn.Controls.Add(btnConnect)
         pnlConn.Location = New Point(62, 90)
         pnlConn.Name = "pnlConn"
-        pnlConn.Size = New Size(676, 161)
+        pnlConn.Size = New Size(676, 43)
         pnlConn.TabIndex = 4
         ' 
         ' pnlSeason
         ' 
-        pnlSeason.Location = New Point(62, 274)
+        pnlSeason.Location = New Point(62, 185)
         pnlSeason.Name = "pnlSeason"
         pnlSeason.Size = New Size(322, 155)
         pnlSeason.TabIndex = 5
@@ -116,37 +90,20 @@ Partial Class FormMain
         pnlModifyData.Controls.Add(btnDrivers)
         pnlModifyData.Controls.Add(btnTeams)
         pnlModifyData.Controls.Add(btnCountries)
-        pnlModifyData.Location = New Point(418, 274)
+        pnlModifyData.Location = New Point(418, 185)
         pnlModifyData.Name = "pnlModifyData"
         pnlModifyData.Size = New Size(320, 155)
         pnlModifyData.TabIndex = 6
         ' 
-        ' btnCountries
+        ' Label1
         ' 
-        btnCountries.Location = New Point(39, 42)
-        btnCountries.Name = "btnCountries"
-        btnCountries.Size = New Size(115, 50)
-        btnCountries.TabIndex = 0
-        btnCountries.Text = "Countries"
-        btnCountries.UseVisualStyleBackColor = True
-        ' 
-        ' btnTeams
-        ' 
-        btnTeams.Location = New Point(158, 42)
-        btnTeams.Name = "btnTeams"
-        btnTeams.Size = New Size(115, 50)
-        btnTeams.TabIndex = 1
-        btnTeams.Text = "Teams"
-        btnTeams.UseVisualStyleBackColor = True
-        ' 
-        ' btnDrivers
-        ' 
-        btnDrivers.Location = New Point(39, 98)
-        btnDrivers.Name = "btnDrivers"
-        btnDrivers.Size = New Size(115, 50)
-        btnDrivers.TabIndex = 2
-        btnDrivers.Text = "Drivers"
-        btnDrivers.UseVisualStyleBackColor = True
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(100, 14)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(148, 20)
+        Label1.TabIndex = 4
+        Label1.Text = "Data you can change"
         ' 
         ' btnGPs
         ' 
@@ -157,14 +114,32 @@ Partial Class FormMain
         btnGPs.Text = "GPs"
         btnGPs.UseVisualStyleBackColor = True
         ' 
-        ' Label1
+        ' btnDrivers
         ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(100, 14)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(118, 15)
-        Label1.TabIndex = 4
-        Label1.Text = "Data you can change"
+        btnDrivers.Location = New Point(39, 98)
+        btnDrivers.Name = "btnDrivers"
+        btnDrivers.Size = New Size(115, 50)
+        btnDrivers.TabIndex = 2
+        btnDrivers.Text = "Drivers"
+        btnDrivers.UseVisualStyleBackColor = True
+        ' 
+        ' btnTeams
+        ' 
+        btnTeams.Location = New Point(158, 42)
+        btnTeams.Name = "btnTeams"
+        btnTeams.Size = New Size(115, 50)
+        btnTeams.TabIndex = 1
+        btnTeams.Text = "Teams"
+        btnTeams.UseVisualStyleBackColor = True
+        ' 
+        ' btnCountries
+        ' 
+        btnCountries.Location = New Point(39, 42)
+        btnCountries.Name = "btnCountries"
+        btnCountries.Size = New Size(115, 50)
+        btnCountries.TabIndex = 0
+        btnCountries.Text = "Countries"
+        btnCountries.UseVisualStyleBackColor = True
         ' 
         ' FormMain
         ' 
@@ -186,9 +161,7 @@ Partial Class FormMain
     End Sub
 
     Friend WithEvents lblWelcome As Label
-    Friend WithEvents btnConnect As Button
     Friend WithEvents MySqlCommand1 As MySql.Data.MySqlClient.MySqlCommand
-    Friend WithEvents lblConnect As Label
     Friend WithEvents lblResultConnection As Label
     Friend WithEvents pnlConn As Panel
     Friend WithEvents pnlSeason As Panel
