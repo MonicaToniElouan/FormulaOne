@@ -25,117 +25,117 @@ Partial Class txtName
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(txtName))
         lblCountries = New Label()
         lstCountries = New ListBox()
-        lblID = New Label()
-        lblName = New Label()
-        lblPopulation = New Label()
-        txtID = New TextBox()
-        TextBox2 = New TextBox()
-        txtPopulation = New TextBox()
-        pnlModifyData = New Panel()
+        lblIDC = New Label()
+        lblNameC = New Label()
+        lblPopulationC = New Label()
+        txtIDC = New TextBox()
+        txtNameC = New TextBox()
+        txtPopulationC = New TextBox()
+        pnlSelectOptionC = New Panel()
         btnClearC = New Button()
         btnDeleteC = New Button()
         btnUpdateC = New Button()
         lblSelectOptionC = New Label()
         btnInsertC = New Button()
-        pnlModifyData.SuspendLayout()
+        pnlSelectOptionC.SuspendLayout()
         SuspendLayout()
         ' 
         ' lblCountries
         ' 
         lblCountries.AutoSize = True
         lblCountries.BackColor = SystemColors.Window
-        lblCountries.Font = New Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblCountries.Font = New Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblCountries.ForeColor = SystemColors.ActiveCaptionText
-        lblCountries.Location = New Point(43, 144)
+        lblCountries.Location = New Point(94, 143)
         lblCountries.Name = "lblCountries"
-        lblCountries.Size = New Size(150, 25)
+        lblCountries.Size = New Size(222, 45)
         lblCountries.TabIndex = 0
-        lblCountries.Text = "COUNTRIES"
+        lblCountries.Text = "COUNTRY"
         ' 
         ' lstCountries
         ' 
         lstCountries.BackColor = SystemColors.GradientInactiveCaption
         lstCountries.FormattingEnabled = True
-        lstCountries.Location = New Point(43, 187)
+        lstCountries.Location = New Point(43, 200)
         lstCountries.Name = "lstCountries"
         lstCountries.Size = New Size(320, 444)
         lstCountries.TabIndex = 1
         ' 
-        ' lblID
+        ' lblIDC
         ' 
-        lblID.AutoSize = True
-        lblID.BackColor = Color.White
-        lblID.Font = New Font("Yu Gothic", 14.8F, FontStyle.Bold)
-        lblID.ForeColor = Color.Black
-        lblID.Location = New Point(500, 158)
-        lblID.Name = "lblID"
-        lblID.Size = New Size(56, 32)
-        lblID.TabIndex = 2
-        lblID.Text = "ID: "
+        lblIDC.AutoSize = True
+        lblIDC.BackColor = Color.White
+        lblIDC.Font = New Font("Yu Gothic", 14.8F, FontStyle.Bold)
+        lblIDC.ForeColor = Color.Black
+        lblIDC.Location = New Point(500, 158)
+        lblIDC.Name = "lblIDC"
+        lblIDC.Size = New Size(56, 32)
+        lblIDC.TabIndex = 2
+        lblIDC.Text = "ID: "
         ' 
-        ' lblName
+        ' lblNameC
         ' 
-        lblName.AutoSize = True
-        lblName.Font = New Font("Yu Gothic", 14F, FontStyle.Bold)
-        lblName.ForeColor = Color.Black
-        lblName.Location = New Point(500, 222)
-        lblName.Name = "lblName"
-        lblName.Size = New Size(102, 31)
-        lblName.TabIndex = 3
-        lblName.Text = "NAME: "
+        lblNameC.AutoSize = True
+        lblNameC.Font = New Font("Yu Gothic", 14F, FontStyle.Bold)
+        lblNameC.ForeColor = Color.Black
+        lblNameC.Location = New Point(500, 222)
+        lblNameC.Name = "lblNameC"
+        lblNameC.Size = New Size(102, 31)
+        lblNameC.TabIndex = 3
+        lblNameC.Text = "NAME: "
         ' 
-        ' lblPopulation
+        ' lblPopulationC
         ' 
-        lblPopulation.AutoSize = True
-        lblPopulation.Font = New Font("Yu Gothic", 14F, FontStyle.Bold)
-        lblPopulation.ForeColor = Color.Black
-        lblPopulation.Location = New Point(500, 276)
-        lblPopulation.Name = "lblPopulation"
-        lblPopulation.Size = New Size(190, 31)
-        lblPopulation.TabIndex = 4
-        lblPopulation.Text = "POPULATION: "
+        lblPopulationC.AutoSize = True
+        lblPopulationC.Font = New Font("Yu Gothic", 14F, FontStyle.Bold)
+        lblPopulationC.ForeColor = Color.Black
+        lblPopulationC.Location = New Point(500, 276)
+        lblPopulationC.Name = "lblPopulationC"
+        lblPopulationC.Size = New Size(190, 31)
+        lblPopulationC.TabIndex = 4
+        lblPopulationC.Text = "POPULATION: "
         ' 
-        ' txtID
+        ' txtIDC
         ' 
-        txtID.BackColor = Color.White
-        txtID.Font = New Font("Segoe UI", 14F)
-        txtID.Location = New Point(705, 151)
-        txtID.Name = "txtID"
-        txtID.Size = New Size(216, 39)
-        txtID.TabIndex = 5
+        txtIDC.BackColor = Color.White
+        txtIDC.Font = New Font("Segoe UI", 14F)
+        txtIDC.Location = New Point(705, 151)
+        txtIDC.Name = "txtIDC"
+        txtIDC.Size = New Size(316, 39)
+        txtIDC.TabIndex = 5
         ' 
-        ' TextBox2
+        ' txtNameC
         ' 
-        TextBox2.BackColor = Color.White
-        TextBox2.Font = New Font("Segoe UI", 14F)
-        TextBox2.Location = New Point(705, 214)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(216, 39)
-        TextBox2.TabIndex = 6
+        txtNameC.BackColor = Color.White
+        txtNameC.Font = New Font("Segoe UI", 14F)
+        txtNameC.Location = New Point(705, 214)
+        txtNameC.Name = "txtNameC"
+        txtNameC.Size = New Size(316, 39)
+        txtNameC.TabIndex = 6
         ' 
-        ' txtPopulation
+        ' txtPopulationC
         ' 
-        txtPopulation.BackColor = Color.White
-        txtPopulation.Font = New Font("Segoe UI", 14F)
-        txtPopulation.Location = New Point(705, 268)
-        txtPopulation.Name = "txtPopulation"
-        txtPopulation.Size = New Size(216, 39)
-        txtPopulation.TabIndex = 7
+        txtPopulationC.BackColor = Color.White
+        txtPopulationC.Font = New Font("Segoe UI", 14F)
+        txtPopulationC.Location = New Point(705, 268)
+        txtPopulationC.Name = "txtPopulationC"
+        txtPopulationC.Size = New Size(316, 39)
+        txtPopulationC.TabIndex = 7
         ' 
-        ' pnlModifyData
+        ' pnlSelectOptionC
         ' 
-        pnlModifyData.BackColor = Color.Red
-        pnlModifyData.Controls.Add(btnClearC)
-        pnlModifyData.Controls.Add(btnDeleteC)
-        pnlModifyData.Controls.Add(btnUpdateC)
-        pnlModifyData.Controls.Add(lblSelectOptionC)
-        pnlModifyData.Controls.Add(btnInsertC)
-        pnlModifyData.ForeColor = Color.MidnightBlue
-        pnlModifyData.Location = New Point(463, 336)
-        pnlModifyData.Margin = New Padding(3, 4, 3, 4)
-        pnlModifyData.Name = "pnlModifyData"
-        pnlModifyData.Size = New Size(558, 308)
-        pnlModifyData.TabIndex = 8
+        pnlSelectOptionC.BackColor = Color.Red
+        pnlSelectOptionC.Controls.Add(btnClearC)
+        pnlSelectOptionC.Controls.Add(btnDeleteC)
+        pnlSelectOptionC.Controls.Add(btnUpdateC)
+        pnlSelectOptionC.Controls.Add(lblSelectOptionC)
+        pnlSelectOptionC.Controls.Add(btnInsertC)
+        pnlSelectOptionC.ForeColor = Color.MidnightBlue
+        pnlSelectOptionC.Location = New Point(463, 336)
+        pnlSelectOptionC.Margin = New Padding(3, 4, 3, 4)
+        pnlSelectOptionC.Name = "pnlSelectOptionC"
+        pnlSelectOptionC.Size = New Size(558, 308)
+        pnlSelectOptionC.TabIndex = 8
         ' 
         ' btnClearC
         ' 
@@ -202,34 +202,34 @@ Partial Class txtName
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1097, 719)
-        Controls.Add(pnlModifyData)
-        Controls.Add(txtPopulation)
-        Controls.Add(TextBox2)
-        Controls.Add(txtID)
-        Controls.Add(lblPopulation)
-        Controls.Add(lblName)
-        Controls.Add(lblID)
+        Controls.Add(pnlSelectOptionC)
+        Controls.Add(txtPopulationC)
+        Controls.Add(txtNameC)
+        Controls.Add(txtIDC)
+        Controls.Add(lblPopulationC)
+        Controls.Add(lblNameC)
+        Controls.Add(lblIDC)
         Controls.Add(lstCountries)
         Controls.Add(lblCountries)
         FormBorderStyle = FormBorderStyle.SizableToolWindow
         Margin = New Padding(3, 4, 3, 4)
         Name = "txtName"
         Text = "FormCountries"
-        pnlModifyData.ResumeLayout(False)
-        pnlModifyData.PerformLayout()
+        pnlSelectOptionC.ResumeLayout(False)
+        pnlSelectOptionC.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
     Friend WithEvents lblCountries As Label
     Friend WithEvents lstCountries As ListBox
-    Friend WithEvents lblID As Label
-    Friend WithEvents lblName As Label
-    Friend WithEvents lblPopulation As Label
-    Friend WithEvents txtID As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents txtPopulation As TextBox
-    Friend WithEvents pnlModifyData As Panel
+    Friend WithEvents lblIDC As Label
+    Friend WithEvents lblNameC As Label
+    Friend WithEvents lblPopulationC As Label
+    Friend WithEvents txtIDC As TextBox
+    Friend WithEvents txtNameC As TextBox
+    Friend WithEvents txtPopulationC As TextBox
+    Friend WithEvents pnlSelectOptionC As Panel
     Friend WithEvents lblSelectOptionC As Label
     Friend WithEvents btnInsertC As Button
     Friend WithEvents btnClearC As Button

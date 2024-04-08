@@ -1,5 +1,5 @@
 ﻿Public Class txtName
-    Private Sub lblID_Click(sender As Object, e As EventArgs) Handles lblID.Click
+    Private Sub lblID_Click(sender As Object, e As EventArgs) Handles lblIDC.Click
 
     End Sub
 
@@ -16,6 +16,10 @@
     End Sub
 
     Private Sub txtName_Load(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub lblCountries_Click(sender As Object, e As EventArgs) Handles lblCountries.Click
 
     End Sub
 End Class

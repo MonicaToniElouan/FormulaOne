@@ -22,31 +22,19 @@ Partial Class FormMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        lblWelcome = New Label()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         MySqlCommand1 = New MySql.Data.MySqlClient.MySqlCommand()
-        lblResultConnection = New Label()
-        pnlConn = New Panel()
-        pnlSeason = New Panel()
         pnlModifyData = New Panel()
-        Label1 = New Label()
         btnGPs = New Button()
         btnDrivers = New Button()
         btnTeams = New Button()
         btnCountries = New Button()
-        pnlConn.SuspendLayout()
+        lblWelcome = New Label()
+        lblResultConnection = New Label()
+        pnlConn = New Panel()
         pnlModifyData.SuspendLayout()
+        pnlConn.SuspendLayout()
         SuspendLayout()
-        ' 
-        ' lblWelcome
-        ' 
-        lblWelcome.AutoSize = True
-        lblWelcome.Font = New Font("Segoe UI", 26.25F, FontStyle.Bold Or FontStyle.Underline, GraphicsUnit.Point, CByte(0))
-        lblWelcome.Location = New Point(120, 33)
-        lblWelcome.Name = "lblWelcome"
-        lblWelcome.Size = New Size(571, 47)
-        lblWelcome.TabIndex = 0
-        lblWelcome.Text = "Welcome To Formula One System"
-        lblWelcome.TextAlign = ContentAlignment.TopCenter
         ' 
         ' MySqlCommand1
         ' 
@@ -55,14 +43,83 @@ Partial Class FormMain
         MySqlCommand1.EnableCaching = False
         MySqlCommand1.Transaction = Nothing
         ' 
+        ' pnlModifyData
+        ' 
+        pnlModifyData.BackColor = Color.Black
+        pnlModifyData.Controls.Add(btnGPs)
+        pnlModifyData.Controls.Add(btnDrivers)
+        pnlModifyData.Controls.Add(btnTeams)
+        pnlModifyData.Controls.Add(btnCountries)
+        pnlModifyData.Font = New Font("Stencil", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        pnlModifyData.ForeColor = Color.Red
+        pnlModifyData.Location = New Point(0, 392)
+        pnlModifyData.Margin = New Padding(3, 4, 3, 4)
+        pnlModifyData.Name = "pnlModifyData"
+        pnlModifyData.Size = New Size(889, 97)
+        pnlModifyData.TabIndex = 6
+        ' 
+        ' btnGPs
+        ' 
+        btnGPs.Location = New Point(12, 16)
+        btnGPs.Margin = New Padding(3, 4, 3, 4)
+        btnGPs.Name = "btnGPs"
+        btnGPs.Size = New Size(195, 67)
+        btnGPs.TabIndex = 3
+        btnGPs.Text = "GPs"
+        btnGPs.UseVisualStyleBackColor = True
+        ' 
+        ' btnDrivers
+        ' 
+        btnDrivers.Location = New Point(452, 16)
+        btnDrivers.Margin = New Padding(3, 4, 3, 4)
+        btnDrivers.Name = "btnDrivers"
+        btnDrivers.Size = New Size(195, 67)
+        btnDrivers.TabIndex = 2
+        btnDrivers.Text = "Drivers"
+        btnDrivers.UseVisualStyleBackColor = True
+        ' 
+        ' btnTeams
+        ' 
+        btnTeams.Location = New Point(672, 16)
+        btnTeams.Margin = New Padding(3, 4, 3, 4)
+        btnTeams.Name = "btnTeams"
+        btnTeams.Size = New Size(195, 67)
+        btnTeams.TabIndex = 1
+        btnTeams.Text = "Teams"
+        btnTeams.UseVisualStyleBackColor = True
+        ' 
+        ' btnCountries
+        ' 
+        btnCountries.Location = New Point(235, 16)
+        btnCountries.Margin = New Padding(3, 4, 3, 4)
+        btnCountries.Name = "btnCountries"
+        btnCountries.Size = New Size(195, 67)
+        btnCountries.TabIndex = 0
+        btnCountries.Text = "Countries"
+        btnCountries.UseVisualStyleBackColor = True
+        ' 
+        ' lblWelcome
+        ' 
+        lblWelcome.AutoSize = True
+        lblWelcome.BackColor = Color.Red
+        lblWelcome.BorderStyle = BorderStyle.FixedSingle
+        lblWelcome.Font = New Font("Sitka Banner", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblWelcome.ForeColor = Color.Transparent
+        lblWelcome.Location = New Point(177, -14)
+        lblWelcome.Name = "lblWelcome"
+        lblWelcome.Size = New Size(549, 89)
+        lblWelcome.TabIndex = 0
+        lblWelcome.Text = "Formula One System"
+        lblWelcome.TextAlign = ContentAlignment.TopCenter
+        ' 
         ' lblResultConnection
         ' 
         lblResultConnection.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblResultConnection.AutoSize = True
         lblResultConnection.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblResultConnection.Location = New Point(297, 12)
+        lblResultConnection.Location = New Point(339, 16)
         lblResultConnection.Name = "lblResultConnection"
-        lblResultConnection.Size = New Size(68, 20)
+        lblResultConnection.Size = New Size(87, 25)
         lblResultConnection.TabIndex = 3
         lblResultConnection.Text = "Message"
         lblResultConnection.TextAlign = ContentAlignment.MiddleCenter
@@ -71,105 +128,38 @@ Partial Class FormMain
         ' pnlConn
         ' 
         pnlConn.Controls.Add(lblResultConnection)
-        pnlConn.Location = New Point(62, 90)
+        pnlConn.Location = New Point(71, 120)
+        pnlConn.Margin = New Padding(3, 4, 3, 4)
         pnlConn.Name = "pnlConn"
-        pnlConn.Size = New Size(676, 43)
+        pnlConn.Size = New Size(773, 57)
         pnlConn.TabIndex = 4
-        ' 
-        ' pnlSeason
-        ' 
-        pnlSeason.Location = New Point(62, 185)
-        pnlSeason.Name = "pnlSeason"
-        pnlSeason.Size = New Size(322, 155)
-        pnlSeason.TabIndex = 5
-        ' 
-        ' pnlModifyData
-        ' 
-        pnlModifyData.Controls.Add(Label1)
-        pnlModifyData.Controls.Add(btnGPs)
-        pnlModifyData.Controls.Add(btnDrivers)
-        pnlModifyData.Controls.Add(btnTeams)
-        pnlModifyData.Controls.Add(btnCountries)
-        pnlModifyData.Location = New Point(418, 185)
-        pnlModifyData.Name = "pnlModifyData"
-        pnlModifyData.Size = New Size(320, 155)
-        pnlModifyData.TabIndex = 6
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(100, 14)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(148, 20)
-        Label1.TabIndex = 4
-        Label1.Text = "Data you can change"
-        ' 
-        ' btnGPs
-        ' 
-        btnGPs.Location = New Point(158, 98)
-        btnGPs.Name = "btnGPs"
-        btnGPs.Size = New Size(115, 50)
-        btnGPs.TabIndex = 3
-        btnGPs.Text = "GPs"
-        btnGPs.UseVisualStyleBackColor = True
-        ' 
-        ' btnDrivers
-        ' 
-        btnDrivers.Location = New Point(39, 98)
-        btnDrivers.Name = "btnDrivers"
-        btnDrivers.Size = New Size(115, 50)
-        btnDrivers.TabIndex = 2
-        btnDrivers.Text = "Drivers"
-        btnDrivers.UseVisualStyleBackColor = True
-        ' 
-        ' btnTeams
-        ' 
-        btnTeams.Location = New Point(158, 42)
-        btnTeams.Name = "btnTeams"
-        btnTeams.Size = New Size(115, 50)
-        btnTeams.TabIndex = 1
-        btnTeams.Text = "Teams"
-        btnTeams.UseVisualStyleBackColor = True
-        ' 
-        ' btnCountries
-        ' 
-        btnCountries.Location = New Point(39, 42)
-        btnCountries.Name = "btnCountries"
-        btnCountries.Size = New Size(115, 50)
-        btnCountries.TabIndex = 0
-        btnCountries.Text = "Countries"
-        btnCountries.UseVisualStyleBackColor = True
         ' 
         ' FormMain
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        ClientSize = New Size(879, 488)
         Controls.Add(pnlModifyData)
-        Controls.Add(pnlSeason)
         Controls.Add(pnlConn)
         Controls.Add(lblWelcome)
+        Margin = New Padding(3, 4, 3, 4)
         Name = "FormMain"
         Text = "Form1"
+        pnlModifyData.ResumeLayout(False)
         pnlConn.ResumeLayout(False)
         pnlConn.PerformLayout()
-        pnlModifyData.ResumeLayout(False)
-        pnlModifyData.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents lblWelcome As Label
     Friend WithEvents MySqlCommand1 As MySql.Data.MySqlClient.MySqlCommand
-    Friend WithEvents lblResultConnection As Label
-    Friend WithEvents pnlConn As Panel
-    Friend WithEvents pnlSeason As Panel
     Friend WithEvents pnlModifyData As Panel
     Friend WithEvents btnGPs As Button
     Friend WithEvents btnDrivers As Button
     Friend WithEvents btnTeams As Button
     Friend WithEvents btnCountries As Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblWelcome As Label
+    Friend WithEvents lblResultConnection As Label
+    Friend WithEvents pnlConn As Panel
 
 End Class

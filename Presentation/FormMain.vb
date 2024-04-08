@@ -41,4 +41,10 @@
 
         End Try
     End Sub
+
+    Private Sub pnlModifyData_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+
 End Class
