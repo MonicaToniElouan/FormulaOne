@@ -1,6 +1,6 @@
 ﻿Public Class FormMain
     Private Sub btnCountries_Click(sender As Object, e As EventArgs) Handles btnCountries.Click
-        Dim form_c As FormCountries = New FormCountries
+        Dim form_c As txtName = New txtName
         form_c.ShowDialog()
     End Sub
 
