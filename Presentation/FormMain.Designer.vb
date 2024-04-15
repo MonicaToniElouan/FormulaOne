@@ -50,50 +50,45 @@ Partial Class FormMain
         pnlModifyData.Controls.Add(btnDrivers)
         pnlModifyData.Controls.Add(btnTeams)
         pnlModifyData.Controls.Add(btnCountries)
-        pnlModifyData.Font = New Font("Stencil", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        pnlModifyData.Font = New Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         pnlModifyData.ForeColor = Color.Red
-        pnlModifyData.Location = New Point(0, 392)
-        pnlModifyData.Margin = New Padding(3, 4, 3, 4)
+        pnlModifyData.Location = New Point(0, 294)
         pnlModifyData.Name = "pnlModifyData"
-        pnlModifyData.Size = New Size(889, 97)
+        pnlModifyData.Size = New Size(778, 73)
         pnlModifyData.TabIndex = 6
         ' 
         ' btnGPs
         ' 
-        btnGPs.Location = New Point(12, 16)
-        btnGPs.Margin = New Padding(3, 4, 3, 4)
+        btnGPs.Location = New Point(10, 12)
         btnGPs.Name = "btnGPs"
-        btnGPs.Size = New Size(195, 67)
+        btnGPs.Size = New Size(171, 50)
         btnGPs.TabIndex = 3
         btnGPs.Text = "GPs"
         btnGPs.UseVisualStyleBackColor = True
         ' 
         ' btnDrivers
         ' 
-        btnDrivers.Location = New Point(452, 16)
-        btnDrivers.Margin = New Padding(3, 4, 3, 4)
+        btnDrivers.Location = New Point(396, 12)
         btnDrivers.Name = "btnDrivers"
-        btnDrivers.Size = New Size(195, 67)
+        btnDrivers.Size = New Size(171, 50)
         btnDrivers.TabIndex = 2
         btnDrivers.Text = "Drivers"
         btnDrivers.UseVisualStyleBackColor = True
         ' 
         ' btnTeams
         ' 
-        btnTeams.Location = New Point(672, 16)
-        btnTeams.Margin = New Padding(3, 4, 3, 4)
+        btnTeams.Location = New Point(588, 12)
         btnTeams.Name = "btnTeams"
-        btnTeams.Size = New Size(195, 67)
+        btnTeams.Size = New Size(171, 50)
         btnTeams.TabIndex = 1
         btnTeams.Text = "Teams"
         btnTeams.UseVisualStyleBackColor = True
         ' 
         ' btnCountries
         ' 
-        btnCountries.Location = New Point(235, 16)
-        btnCountries.Margin = New Padding(3, 4, 3, 4)
+        btnCountries.Location = New Point(206, 12)
         btnCountries.Name = "btnCountries"
-        btnCountries.Size = New Size(195, 67)
+        btnCountries.Size = New Size(171, 50)
         btnCountries.TabIndex = 0
         btnCountries.Text = "Countries"
         btnCountries.UseVisualStyleBackColor = True
@@ -105,9 +100,9 @@ Partial Class FormMain
         lblWelcome.BorderStyle = BorderStyle.FixedSingle
         lblWelcome.Font = New Font("Sitka Banner", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblWelcome.ForeColor = Color.Transparent
-        lblWelcome.Location = New Point(177, -14)
+        lblWelcome.Location = New Point(155, -10)
         lblWelcome.Name = "lblWelcome"
-        lblWelcome.Size = New Size(549, 89)
+        lblWelcome.Size = New Size(440, 71)
         lblWelcome.TabIndex = 0
         lblWelcome.Text = "Formula One System"
         lblWelcome.TextAlign = ContentAlignment.TopCenter
@@ -117,9 +112,9 @@ Partial Class FormMain
         lblResultConnection.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblResultConnection.AutoSize = True
         lblResultConnection.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblResultConnection.Location = New Point(339, 16)
+        lblResultConnection.Location = New Point(297, 12)
         lblResultConnection.Name = "lblResultConnection"
-        lblResultConnection.Size = New Size(87, 25)
+        lblResultConnection.Size = New Size(68, 20)
         lblResultConnection.TabIndex = 3
         lblResultConnection.Text = "Message"
         lblResultConnection.TextAlign = ContentAlignment.MiddleCenter
@@ -128,22 +123,20 @@ Partial Class FormMain
         ' pnlConn
         ' 
         pnlConn.Controls.Add(lblResultConnection)
-        pnlConn.Location = New Point(71, 120)
-        pnlConn.Margin = New Padding(3, 4, 3, 4)
+        pnlConn.Location = New Point(62, 90)
         pnlConn.Name = "pnlConn"
-        pnlConn.Size = New Size(773, 57)
+        pnlConn.Size = New Size(676, 43)
         pnlConn.TabIndex = 4
         ' 
         ' FormMain
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
-        ClientSize = New Size(879, 488)
+        ClientSize = New Size(769, 366)
         Controls.Add(pnlModifyData)
         Controls.Add(pnlConn)
         Controls.Add(lblWelcome)
-        Margin = New Padding(3, 4, 3, 4)
         Name = "FormMain"
         Text = "Form1"
         pnlModifyData.ResumeLayout(False)

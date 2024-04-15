@@ -4,11 +4,6 @@
     Property d As Driver = New Driver
     Property g As GP = New GP
 
-    Private Sub btnCountries_Click(sender As Object, e As EventArgs) Handles btnCountries.Click
-        Dim form_c As txtName = New txtName
-        form_c.ShowDialog()
-    End Sub
-
     Private Sub btnTeams_Click(sender As Object, e As EventArgs) Handles btnTeams.Click
         Dim form_t As FormTeams = New FormTeams
         form_t.ShowDialog()
@@ -55,5 +50,8 @@
 
     End Sub
 
-
+    Private Sub btnCountries_Click(sender As Object, e As EventArgs) Handles btnCountries.Click
+        Dim c As FormCountries = New FormCountries(Me.c)
+        c.ShowDialog()
+    End Sub
 End Class

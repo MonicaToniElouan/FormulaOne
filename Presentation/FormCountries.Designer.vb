@@ -46,9 +46,9 @@ Partial Class txtName
         lblCountries.BackColor = SystemColors.Window
         lblCountries.Font = New Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblCountries.ForeColor = SystemColors.ActiveCaptionText
-        lblCountries.Location = New Point(94, 143)
+        lblCountries.Location = New Point(82, 107)
         lblCountries.Name = "lblCountries"
-        lblCountries.Size = New Size(222, 45)
+        lblCountries.Size = New Size(175, 36)
         lblCountries.TabIndex = 0
         lblCountries.Text = "COUNTRY"
         ' 
@@ -56,9 +56,11 @@ Partial Class txtName
         ' 
         lstCountries.BackColor = SystemColors.GradientInactiveCaption
         lstCountries.FormattingEnabled = True
-        lstCountries.Location = New Point(43, 200)
+        lstCountries.ItemHeight = 15
+        lstCountries.Location = New Point(38, 150)
+        lstCountries.Margin = New Padding(3, 2, 3, 2)
         lstCountries.Name = "lstCountries"
-        lstCountries.Size = New Size(320, 444)
+        lstCountries.Size = New Size(280, 334)
         lstCountries.TabIndex = 1
         ' 
         ' lblIDC
@@ -67,9 +69,9 @@ Partial Class txtName
         lblIDC.BackColor = Color.White
         lblIDC.Font = New Font("Yu Gothic", 14.8F, FontStyle.Bold)
         lblIDC.ForeColor = Color.Black
-        lblIDC.Location = New Point(500, 158)
+        lblIDC.Location = New Point(438, 118)
         lblIDC.Name = "lblIDC"
-        lblIDC.Size = New Size(56, 32)
+        lblIDC.Size = New Size(45, 26)
         lblIDC.TabIndex = 2
         lblIDC.Text = "ID: "
         ' 
@@ -78,9 +80,9 @@ Partial Class txtName
         lblNameC.AutoSize = True
         lblNameC.Font = New Font("Yu Gothic", 14F, FontStyle.Bold)
         lblNameC.ForeColor = Color.Black
-        lblNameC.Location = New Point(500, 222)
+        lblNameC.Location = New Point(438, 166)
         lblNameC.Name = "lblNameC"
-        lblNameC.Size = New Size(102, 31)
+        lblNameC.Size = New Size(81, 25)
         lblNameC.TabIndex = 3
         lblNameC.Text = "NAME: "
         ' 
@@ -89,9 +91,9 @@ Partial Class txtName
         lblPopulationC.AutoSize = True
         lblPopulationC.Font = New Font("Yu Gothic", 14F, FontStyle.Bold)
         lblPopulationC.ForeColor = Color.Black
-        lblPopulationC.Location = New Point(500, 276)
+        lblPopulationC.Location = New Point(438, 207)
         lblPopulationC.Name = "lblPopulationC"
-        lblPopulationC.Size = New Size(190, 31)
+        lblPopulationC.Size = New Size(152, 25)
         lblPopulationC.TabIndex = 4
         lblPopulationC.Text = "POPULATION: "
         ' 
@@ -99,27 +101,30 @@ Partial Class txtName
         ' 
         txtIDC.BackColor = Color.White
         txtIDC.Font = New Font("Segoe UI", 14F)
-        txtIDC.Location = New Point(705, 151)
+        txtIDC.Location = New Point(617, 113)
+        txtIDC.Margin = New Padding(3, 2, 3, 2)
         txtIDC.Name = "txtIDC"
-        txtIDC.Size = New Size(316, 39)
+        txtIDC.Size = New Size(277, 32)
         txtIDC.TabIndex = 5
         ' 
         ' txtNameC
         ' 
         txtNameC.BackColor = Color.White
         txtNameC.Font = New Font("Segoe UI", 14F)
-        txtNameC.Location = New Point(705, 214)
+        txtNameC.Location = New Point(617, 160)
+        txtNameC.Margin = New Padding(3, 2, 3, 2)
         txtNameC.Name = "txtNameC"
-        txtNameC.Size = New Size(316, 39)
+        txtNameC.Size = New Size(277, 32)
         txtNameC.TabIndex = 6
         ' 
         ' txtPopulationC
         ' 
         txtPopulationC.BackColor = Color.White
         txtPopulationC.Font = New Font("Segoe UI", 14F)
-        txtPopulationC.Location = New Point(705, 268)
+        txtPopulationC.Location = New Point(617, 201)
+        txtPopulationC.Margin = New Padding(3, 2, 3, 2)
         txtPopulationC.Name = "txtPopulationC"
-        txtPopulationC.Size = New Size(316, 39)
+        txtPopulationC.Size = New Size(277, 32)
         txtPopulationC.TabIndex = 7
         ' 
         ' pnlSelectOptionC
@@ -131,20 +136,18 @@ Partial Class txtName
         pnlSelectOptionC.Controls.Add(lblSelectOptionC)
         pnlSelectOptionC.Controls.Add(btnInsertC)
         pnlSelectOptionC.ForeColor = Color.MidnightBlue
-        pnlSelectOptionC.Location = New Point(463, 336)
-        pnlSelectOptionC.Margin = New Padding(3, 4, 3, 4)
+        pnlSelectOptionC.Location = New Point(405, 252)
         pnlSelectOptionC.Name = "pnlSelectOptionC"
-        pnlSelectOptionC.Size = New Size(558, 308)
+        pnlSelectOptionC.Size = New Size(488, 231)
         pnlSelectOptionC.TabIndex = 8
         ' 
         ' btnClearC
         ' 
         btnClearC.BackColor = Color.White
-        btnClearC.Font = New Font("Ubuntu Condensed", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnClearC.Location = New Point(287, 48)
-        btnClearC.Margin = New Padding(3, 4, 3, 4)
+        btnClearC.Font = New Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnClearC.Location = New Point(251, 36)
         btnClearC.Name = "btnClearC"
-        btnClearC.Size = New Size(241, 104)
+        btnClearC.Size = New Size(211, 78)
         btnClearC.TabIndex = 7
         btnClearC.Text = "CLEAR"
         btnClearC.UseVisualStyleBackColor = False
@@ -152,11 +155,10 @@ Partial Class txtName
         ' btnDeleteC
         ' 
         btnDeleteC.BackColor = Color.White
-        btnDeleteC.Font = New Font("Ubuntu Condensed", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnDeleteC.Location = New Point(23, 160)
-        btnDeleteC.Margin = New Padding(3, 4, 3, 4)
+        btnDeleteC.Font = New Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnDeleteC.Location = New Point(20, 120)
         btnDeleteC.Name = "btnDeleteC"
-        btnDeleteC.Size = New Size(247, 100)
+        btnDeleteC.Size = New Size(216, 75)
         btnDeleteC.TabIndex = 6
         btnDeleteC.Text = "DELETE"
         btnDeleteC.UseVisualStyleBackColor = False
@@ -164,11 +166,10 @@ Partial Class txtName
         ' btnUpdateC
         ' 
         btnUpdateC.BackColor = Color.White
-        btnUpdateC.Font = New Font("Ubuntu Condensed", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnUpdateC.Location = New Point(287, 160)
-        btnUpdateC.Margin = New Padding(3, 4, 3, 4)
+        btnUpdateC.Font = New Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnUpdateC.Location = New Point(251, 120)
         btnUpdateC.Name = "btnUpdateC"
-        btnUpdateC.Size = New Size(241, 100)
+        btnUpdateC.Size = New Size(211, 75)
         btnUpdateC.TabIndex = 5
         btnUpdateC.Text = "UPDATE"
         btnUpdateC.UseVisualStyleBackColor = False
@@ -178,30 +179,29 @@ Partial Class txtName
         lblSelectOptionC.AutoSize = True
         lblSelectOptionC.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblSelectOptionC.ForeColor = SystemColors.ActiveCaptionText
-        lblSelectOptionC.Location = New Point(188, 18)
+        lblSelectOptionC.Location = New Point(164, 14)
         lblSelectOptionC.Name = "lblSelectOptionC"
-        lblSelectOptionC.Size = New Size(180, 25)
+        lblSelectOptionC.Size = New Size(147, 20)
         lblSelectOptionC.TabIndex = 4
         lblSelectOptionC.Text = "SELECT AN OPTION"
         ' 
         ' btnInsertC
         ' 
         btnInsertC.BackColor = Color.White
-        btnInsertC.Font = New Font("Ubuntu Condensed", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnInsertC.Location = New Point(23, 47)
-        btnInsertC.Margin = New Padding(3, 4, 3, 4)
+        btnInsertC.Font = New Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnInsertC.Location = New Point(20, 35)
         btnInsertC.Name = "btnInsertC"
-        btnInsertC.Size = New Size(247, 105)
+        btnInsertC.Size = New Size(216, 79)
         btnInsertC.TabIndex = 0
         btnInsertC.Text = "INSERT"
         btnInsertC.UseVisualStyleBackColor = False
         ' 
         ' txtName
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
-        ClientSize = New Size(1097, 719)
+        ClientSize = New Size(960, 539)
         Controls.Add(pnlSelectOptionC)
         Controls.Add(txtPopulationC)
         Controls.Add(txtNameC)
@@ -212,7 +212,6 @@ Partial Class txtName
         Controls.Add(lstCountries)
         Controls.Add(lblCountries)
         FormBorderStyle = FormBorderStyle.SizableToolWindow
-        Margin = New Padding(3, 4, 3, 4)
         Name = "txtName"
         Text = "FormCountries"
         pnlSelectOptionC.ResumeLayout(False)
