@@ -17,28 +17,27 @@
         Next
     End Sub
 
-    Public Sub Read(ByRef t As Team)
+    Public Sub Read(ByRef g As GP)
         Dim col As Collection : Dim aux As Collection
         Dim c As Country
-        col = DBBroker.GetBroker.Read("SELECT * FROM Teams WHERE TeamID='" & t.TeamID & "';")
+        col = DBBroker.GetBroker.Read("SELECT * FROM GPs WHERE GPID='" & g.GPID & "';")
         For Each aux In col
             c = New Country(aux(3).ToString)
-            t.TeamName = aux(1).ToString
-            t.TeamCountry = c.ReadCountry()
-            t.CreationDate = Date.Parse(aux(4).ToString)
+            g.GPName = aux(2).ToString
+            g.GPCountry = c.ReadCountry()
         Next
     End Sub
 
-    Public Function Insert(ByVal t As Team) As Integer
-        Return DBBroker.GetBroker.Change("INSERT INTO Teams VALUES (" & t.TeamID & ", '" & t.TeamName & "', '" & t.TeamCountry.CountryID & "', '" & t.CreationDate.ToString("yyyy-MM-dd") & "');")
+    Public Function Insert(ByVal g As GP) As Integer
+        Return DBBroker.GetBroker.Change("INSERT INTO GPs VALUES (" & g.GPID & ", '" & g.GPName & "', '" & g.GPCountry.CountryID & "');")
     End Function
 
-    Public Function Update(ByVal t As Team) As Integer
-        Return DBBroker.GetBroker.Change("UPDATE Teams SET TeamName='" & t.TeamName & "', TeamCountry='" & t.TeamCountry.CountryID & "', CreationDate='" & t.CreationDate.ToString("yyyy-MM-dd") & "' WHERE TeamID='" & t.TeamID & "';")
+    Public Function Update(ByVal g As GP) As Integer
+        Return DBBroker.GetBroker.Change("UPDATE GPs SET GPName='" & g.GPName & "', GPCountry='" & g.GPCountry.CountryID & "' WHERE GPID='" & g.GPID & "';")
     End Function
 
-    Public Function Delete(ByVal t As Team) As Integer
-        Return DBBroker.GetBroker.Change("DELETE FROM Teams WHERE TeamID='" & t.TeamID & "';")
+    Public Function Delete(ByVal g As GP) As Integer
+        Return DBBroker.GetBroker.Change("DELETE FROM GPs WHERE GPID='" & g.GPID & "';")
     End Function
 
 End Class

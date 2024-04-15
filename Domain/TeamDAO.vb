@@ -25,7 +25,7 @@ Public Class TeamDAO
         col = DBBroker.GetBroker.Read("SELECT * FROM Teams WHERE TeamID='" & t.TeamID & "';")
         For Each aux In col
             c = New Country(aux(3).ToString)
-            t.TeamName = aux(1).ToString
+            t.TeamName = aux(2).ToString
             t.TeamCountry = c.ReadCountry()
             t.CreationDate = Date.Parse(aux(4).ToString)
         Next
@@ -40,6 +40,6 @@ Public Class TeamDAO
     End Function
 
     Public Function Delete(ByVal t As Team) As Integer
-        Return DBBroker.GetBroker.Change("DELETE FROM Teams WHERE TeamID='" & t.TeamID & "';")
+        Return DBBroker.GetBroker.Change("DELETE FROM Teams WHERE TeamID=" & t.TeamID & ";")
     End Function
 End Class
