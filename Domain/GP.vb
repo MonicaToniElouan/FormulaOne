@@ -2,7 +2,7 @@
     Public Property GPID As Integer
     Public Property GPName As String
     Public Property GPCountry As Country
-    Public ReadOnly Property gpDAO As GPDAO
+    Public ReadOnly Property GPDAO As GPDAO
 
     Public Sub New()
         Me.gpDAO = New GPDAO
@@ -19,6 +19,27 @@
         Me.GPCountry = country
         Me.gpDAO = New GPDAO
     End Sub
+
+    Public Sub ReadAllGPs()
+        Me.GPDAO.ReadAll()
+    End Sub
+
+    Public Function ReadGP()
+        Me.GPDAO.Read(Me)
+        Return Me
+    End Function
+
+    Public Function InsertGP()
+        Return Me.GPDAO.Insert(Me)
+    End Function
+
+    Public Function UpdateGP()
+        Return Me.GPDAO.Update(Me)
+    End Function
+
+    Public Function DeleteGP()
+        Return Me.GPDAO.Delete(Me)
+    End Function
 
 
 

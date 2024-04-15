@@ -1,4 +1,9 @@
 ﻿Public Class FormMain
+    Property c As Country = New Country
+    Property t As Team = New Team
+    Property d As Driver = New Driver
+    Property g As GP = New GP
+
     Private Sub btnCountries_Click(sender As Object, e As EventArgs) Handles btnCountries.Click
         Dim form_c As txtName = New txtName
         form_c.ShowDialog()
@@ -12,6 +17,9 @@
     Private Sub btnDrivers_Click(sender As Object, e As EventArgs) Handles btnDrivers.Click
         Dim form_d As FormDrivers = New FormDrivers
         form_d.ShowDialog()
+
+        Dim d As Driver = New Driver(0, "Lewis", "Hamilton", New Country("ENG"))
+        d.UpdateDriver()
     End Sub
 
     Private Sub btnGPs_Click(sender As Object, e As EventArgs) Handles btnGPs.Click
@@ -20,12 +28,13 @@
     End Sub
 
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim c = New Country
-        Dim t = New Team
+
 
         Try
-            c.ReadAllCountries()
-            t.ReadAllTeams()
+            Me.c.ReadAllCountries()
+            Me.t.ReadAllTeams()
+            Me.d.ReadAllDrivers()
+            Me.g.ReadAllGPs()
             lblResultConnection.Text = "Connection with database SUCCSESSFUL"
             lblResultConnection.ForeColor = Color.Green
             ' Set the new location of the label
