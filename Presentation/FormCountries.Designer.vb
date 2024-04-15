@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class txtName
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class FormCountries
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,9 @@ Partial Class txtName
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(txtName))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormCountries))
         lblCountries = New Label()
         lstCountries = New ListBox()
         lblIDC = New Label()
@@ -44,7 +44,7 @@ Partial Class txtName
         ' 
         lblCountries.AutoSize = True
         lblCountries.BackColor = SystemColors.Window
-        lblCountries.Font = New Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblCountries.Font = New Font("Times New Roman", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblCountries.ForeColor = SystemColors.ActiveCaptionText
         lblCountries.Location = New Point(82, 107)
         lblCountries.Name = "lblCountries"
@@ -78,7 +78,7 @@ Partial Class txtName
         ' lblNameC
         ' 
         lblNameC.AutoSize = True
-        lblNameC.Font = New Font("Yu Gothic", 14F, FontStyle.Bold)
+        lblNameC.Font = New Font("Yu Gothic", 14.0F, FontStyle.Bold)
         lblNameC.ForeColor = Color.Black
         lblNameC.Location = New Point(438, 166)
         lblNameC.Name = "lblNameC"
@@ -89,7 +89,7 @@ Partial Class txtName
         ' lblPopulationC
         ' 
         lblPopulationC.AutoSize = True
-        lblPopulationC.Font = New Font("Yu Gothic", 14F, FontStyle.Bold)
+        lblPopulationC.Font = New Font("Yu Gothic", 14.0F, FontStyle.Bold)
         lblPopulationC.ForeColor = Color.Black
         lblPopulationC.Location = New Point(438, 207)
         lblPopulationC.Name = "lblPopulationC"
@@ -100,7 +100,7 @@ Partial Class txtName
         ' txtIDC
         ' 
         txtIDC.BackColor = Color.White
-        txtIDC.Font = New Font("Segoe UI", 14F)
+        txtIDC.Font = New Font("Segoe UI", 14.0F)
         txtIDC.Location = New Point(617, 113)
         txtIDC.Margin = New Padding(3, 2, 3, 2)
         txtIDC.Name = "txtIDC"
@@ -110,7 +110,7 @@ Partial Class txtName
         ' txtNameC
         ' 
         txtNameC.BackColor = Color.White
-        txtNameC.Font = New Font("Segoe UI", 14F)
+        txtNameC.Font = New Font("Segoe UI", 14.0F)
         txtNameC.Location = New Point(617, 160)
         txtNameC.Margin = New Padding(3, 2, 3, 2)
         txtNameC.Name = "txtNameC"
@@ -120,7 +120,7 @@ Partial Class txtName
         ' txtPopulationC
         ' 
         txtPopulationC.BackColor = Color.White
-        txtPopulationC.Font = New Font("Segoe UI", 14F)
+        txtPopulationC.Font = New Font("Segoe UI", 14.0F)
         txtPopulationC.Location = New Point(617, 201)
         txtPopulationC.Margin = New Padding(3, 2, 3, 2)
         txtPopulationC.Name = "txtPopulationC"
@@ -196,9 +196,9 @@ Partial Class txtName
         btnInsertC.Text = "INSERT"
         btnInsertC.UseVisualStyleBackColor = False
         ' 
-        ' txtName
+        ' FormCountries
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(960, 539)
@@ -212,7 +212,7 @@ Partial Class txtName
         Controls.Add(lstCountries)
         Controls.Add(lblCountries)
         FormBorderStyle = FormBorderStyle.SizableToolWindow
-        Name = "txtName"
+        Name = "FormCountries"
         Text = "FormCountries"
         pnlSelectOptionC.ResumeLayout(False)
         pnlSelectOptionC.PerformLayout()

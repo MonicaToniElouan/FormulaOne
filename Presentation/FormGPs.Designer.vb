@@ -46,9 +46,9 @@ Partial Class FormGPs
         lblGPs.BackColor = SystemColors.Window
         lblGPs.Font = New Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblGPs.ForeColor = Color.IndianRed
-        lblGPs.Location = New Point(151, 31)
+        lblGPs.Location = New Point(132, 23)
         lblGPs.Name = "lblGPs"
-        lblGPs.Size = New Size(76, 45)
+        lblGPs.Size = New Size(59, 36)
         lblGPs.TabIndex = 3
         lblGPs.Text = "GP"
         ' 
@@ -56,9 +56,11 @@ Partial Class FormGPs
         ' 
         lstGP.BackColor = SystemColors.Menu
         lstGP.FormattingEnabled = True
-        lstGP.Location = New Point(29, 88)
+        lstGP.ItemHeight = 15
+        lstGP.Location = New Point(25, 66)
+        lstGP.Margin = New Padding(3, 2, 3, 2)
         lstGP.Name = "lstGP"
-        lstGP.Size = New Size(320, 504)
+        lstGP.Size = New Size(280, 379)
         lstGP.TabIndex = 13
         ' 
         ' pnlSelectOptionGP
@@ -70,21 +72,19 @@ Partial Class FormGPs
         pnlSelectOptionGP.Controls.Add(lblSelectOptionC)
         pnlSelectOptionGP.Controls.Add(btnInsertGP)
         pnlSelectOptionGP.ForeColor = Color.IndianRed
-        pnlSelectOptionGP.Location = New Point(388, 284)
-        pnlSelectOptionGP.Margin = New Padding(3, 4, 3, 4)
+        pnlSelectOptionGP.Location = New Point(340, 213)
         pnlSelectOptionGP.Name = "pnlSelectOptionGP"
-        pnlSelectOptionGP.Size = New Size(558, 308)
+        pnlSelectOptionGP.Size = New Size(488, 231)
         pnlSelectOptionGP.TabIndex = 14
         ' 
         ' btnClearGP
         ' 
         btnClearGP.BackColor = SystemColors.Menu
-        btnClearGP.Font = New Font("Ubuntu Condensed", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnClearGP.Font = New Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnClearGP.ForeColor = Color.IndianRed
-        btnClearGP.Location = New Point(287, 48)
-        btnClearGP.Margin = New Padding(3, 4, 3, 4)
+        btnClearGP.Location = New Point(251, 36)
         btnClearGP.Name = "btnClearGP"
-        btnClearGP.Size = New Size(241, 104)
+        btnClearGP.Size = New Size(211, 78)
         btnClearGP.TabIndex = 7
         btnClearGP.Text = "CLEAR"
         btnClearGP.UseVisualStyleBackColor = False
@@ -92,11 +92,10 @@ Partial Class FormGPs
         ' btnDeleteGP
         ' 
         btnDeleteGP.BackColor = SystemColors.Menu
-        btnDeleteGP.Font = New Font("Ubuntu Condensed", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnDeleteGP.Location = New Point(23, 160)
-        btnDeleteGP.Margin = New Padding(3, 4, 3, 4)
+        btnDeleteGP.Font = New Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnDeleteGP.Location = New Point(20, 120)
         btnDeleteGP.Name = "btnDeleteGP"
-        btnDeleteGP.Size = New Size(247, 100)
+        btnDeleteGP.Size = New Size(216, 75)
         btnDeleteGP.TabIndex = 6
         btnDeleteGP.Text = "DELETE"
         btnDeleteGP.UseVisualStyleBackColor = False
@@ -104,11 +103,10 @@ Partial Class FormGPs
         ' btnUpdateGP
         ' 
         btnUpdateGP.BackColor = SystemColors.Menu
-        btnUpdateGP.Font = New Font("Ubuntu Condensed", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnUpdateGP.Location = New Point(287, 160)
-        btnUpdateGP.Margin = New Padding(3, 4, 3, 4)
+        btnUpdateGP.Font = New Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnUpdateGP.Location = New Point(251, 120)
         btnUpdateGP.Name = "btnUpdateGP"
-        btnUpdateGP.Size = New Size(241, 100)
+        btnUpdateGP.Size = New Size(211, 75)
         btnUpdateGP.TabIndex = 5
         btnUpdateGP.Text = "UPDATE"
         btnUpdateGP.UseVisualStyleBackColor = False
@@ -119,20 +117,19 @@ Partial Class FormGPs
         lblSelectOptionC.BackColor = Color.MistyRose
         lblSelectOptionC.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblSelectOptionC.ForeColor = Color.Black
-        lblSelectOptionC.Location = New Point(189, 18)
+        lblSelectOptionC.Location = New Point(165, 14)
         lblSelectOptionC.Name = "lblSelectOptionC"
-        lblSelectOptionC.Size = New Size(180, 25)
+        lblSelectOptionC.Size = New Size(147, 20)
         lblSelectOptionC.TabIndex = 4
         lblSelectOptionC.Text = "SELECT AN OPTION"
         ' 
         ' btnInsertGP
         ' 
         btnInsertGP.BackColor = SystemColors.Menu
-        btnInsertGP.Font = New Font("Ubuntu Condensed", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnInsertGP.Location = New Point(23, 47)
-        btnInsertGP.Margin = New Padding(3, 4, 3, 4)
+        btnInsertGP.Font = New Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnInsertGP.Location = New Point(20, 35)
         btnInsertGP.Name = "btnInsertGP"
-        btnInsertGP.Size = New Size(247, 105)
+        btnInsertGP.Size = New Size(216, 79)
         btnInsertGP.TabIndex = 0
         btnInsertGP.Text = "INSERT"
         btnInsertGP.UseVisualStyleBackColor = False
@@ -143,9 +140,9 @@ Partial Class FormGPs
         lblIDGP.BackColor = Color.Black
         lblIDGP.Font = New Font("Yu Gothic", 14.8F, FontStyle.Bold)
         lblIDGP.ForeColor = Color.Transparent
-        lblIDGP.Location = New Point(388, 88)
+        lblIDGP.Location = New Point(340, 66)
         lblIDGP.Name = "lblIDGP"
-        lblIDGP.Size = New Size(56, 32)
+        lblIDGP.Size = New Size(45, 26)
         lblIDGP.TabIndex = 15
         lblIDGP.Text = "ID: "
         ' 
@@ -155,9 +152,9 @@ Partial Class FormGPs
         lblNameGP.BackColor = Color.Black
         lblNameGP.Font = New Font("Yu Gothic", 14.8F, FontStyle.Bold)
         lblNameGP.ForeColor = Color.Transparent
-        lblNameGP.Location = New Point(388, 155)
+        lblNameGP.Location = New Point(340, 116)
         lblNameGP.Name = "lblNameGP"
-        lblNameGP.Size = New Size(99, 32)
+        lblNameGP.Size = New Size(80, 26)
         lblNameGP.TabIndex = 16
         lblNameGP.Text = "NAME:"
         ' 
@@ -167,9 +164,9 @@ Partial Class FormGPs
         lblCountryGP.BackColor = Color.Black
         lblCountryGP.Font = New Font("Yu Gothic", 14.8F, FontStyle.Bold)
         lblCountryGP.ForeColor = Color.Transparent
-        lblCountryGP.Location = New Point(388, 224)
+        lblCountryGP.Location = New Point(340, 168)
         lblCountryGP.Name = "lblCountryGP"
-        lblCountryGP.Size = New Size(153, 32)
+        lblCountryGP.Size = New Size(124, 26)
         lblCountryGP.TabIndex = 17
         lblCountryGP.Text = "COUNTRY: "
         ' 
@@ -177,35 +174,38 @@ Partial Class FormGPs
         ' 
         txtIDGP.BackColor = Color.White
         txtIDGP.Font = New Font("Segoe UI", 14F)
-        txtIDGP.Location = New Point(552, 81)
+        txtIDGP.Location = New Point(483, 61)
+        txtIDGP.Margin = New Padding(3, 2, 3, 2)
         txtIDGP.Name = "txtIDGP"
-        txtIDGP.Size = New Size(394, 39)
+        txtIDGP.Size = New Size(345, 32)
         txtIDGP.TabIndex = 18
         ' 
         ' txtNameGP
         ' 
         txtNameGP.BackColor = Color.White
         txtNameGP.Font = New Font("Segoe UI", 14F)
-        txtNameGP.Location = New Point(552, 148)
+        txtNameGP.Location = New Point(483, 111)
+        txtNameGP.Margin = New Padding(3, 2, 3, 2)
         txtNameGP.Name = "txtNameGP"
-        txtNameGP.Size = New Size(394, 39)
+        txtNameGP.Size = New Size(345, 32)
         txtNameGP.TabIndex = 19
         ' 
         ' txtCountryGP
         ' 
         txtCountryGP.BackColor = Color.White
         txtCountryGP.Font = New Font("Segoe UI", 14F)
-        txtCountryGP.Location = New Point(552, 217)
+        txtCountryGP.Location = New Point(483, 163)
+        txtCountryGP.Margin = New Padding(3, 2, 3, 2)
         txtCountryGP.Name = "txtCountryGP"
-        txtCountryGP.Size = New Size(394, 39)
+        txtCountryGP.Size = New Size(345, 32)
         txtCountryGP.TabIndex = 20
         ' 
         ' FormGPs
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
-        ClientSize = New Size(958, 613)
+        ClientSize = New Size(838, 460)
         Controls.Add(txtCountryGP)
         Controls.Add(txtNameGP)
         Controls.Add(txtIDGP)
@@ -215,6 +215,7 @@ Partial Class FormGPs
         Controls.Add(pnlSelectOptionGP)
         Controls.Add(lstGP)
         Controls.Add(lblGPs)
+        Margin = New Padding(3, 2, 3, 2)
         Name = "FormGPs"
         Text = "FormGPs"
         pnlSelectOptionGP.ResumeLayout(False)
