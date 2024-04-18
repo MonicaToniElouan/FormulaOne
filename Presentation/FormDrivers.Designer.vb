@@ -38,7 +38,7 @@ Partial Class FormDrivers
         txtIDD = New TextBox()
         txtNameD = New TextBox()
         txtSurnameD = New TextBox()
-        txtCountryD = New TextBox()
+        cmbD = New ComboBox()
         pnlSelectOptionD.SuspendLayout()
         SuspendLayout()
         ' 
@@ -213,15 +213,14 @@ Partial Class FormDrivers
         txtSurnameD.Size = New Size(276, 32)
         txtSurnameD.TabIndex = 11
         ' 
-        ' txtCountryD
+        ' cmbD
         ' 
-        txtCountryD.BackColor = Color.White
-        txtCountryD.Font = New Font("Segoe UI", 14F)
-        txtCountryD.Location = New Point(565, 191)
-        txtCountryD.Margin = New Padding(3, 2, 3, 2)
-        txtCountryD.Name = "txtCountryD"
-        txtCountryD.Size = New Size(276, 32)
-        txtCountryD.TabIndex = 12
+        cmbD.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cmbD.FormattingEnabled = True
+        cmbD.Location = New Point(565, 193)
+        cmbD.Name = "cmbD"
+        cmbD.Size = New Size(276, 33)
+        cmbD.TabIndex = 13
         ' 
         ' FormDrivers
         ' 
@@ -229,7 +228,7 @@ Partial Class FormDrivers
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(851, 502)
-        Controls.Add(txtCountryD)
+        Controls.Add(cmbD)
         Controls.Add(txtSurnameD)
         Controls.Add(txtNameD)
         Controls.Add(txtIDD)
@@ -264,5 +263,5 @@ Partial Class FormDrivers
     Friend WithEvents txtIDD As TextBox
     Friend WithEvents txtNameD As TextBox
     Friend WithEvents txtSurnameD As TextBox
-    Friend WithEvents txtCountryD As TextBox
+    Friend WithEvents cmbD As ComboBox
 End Class

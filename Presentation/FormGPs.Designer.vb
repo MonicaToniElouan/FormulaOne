@@ -36,7 +36,7 @@ Partial Class FormGPs
         lblCountryGP = New Label()
         txtIDGP = New TextBox()
         txtNameGP = New TextBox()
-        txtCountryGP = New TextBox()
+        cmbG = New ComboBox()
         pnlSelectOptionGP.SuspendLayout()
         SuspendLayout()
         ' 
@@ -190,15 +190,14 @@ Partial Class FormGPs
         txtNameGP.Size = New Size(345, 32)
         txtNameGP.TabIndex = 19
         ' 
-        ' txtCountryGP
+        ' cmbG
         ' 
-        txtCountryGP.BackColor = Color.White
-        txtCountryGP.Font = New Font("Segoe UI", 14F)
-        txtCountryGP.Location = New Point(483, 163)
-        txtCountryGP.Margin = New Padding(3, 2, 3, 2)
-        txtCountryGP.Name = "txtCountryGP"
-        txtCountryGP.Size = New Size(345, 32)
-        txtCountryGP.TabIndex = 20
+        cmbG.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cmbG.FormattingEnabled = True
+        cmbG.Location = New Point(483, 161)
+        cmbG.Name = "cmbG"
+        cmbG.Size = New Size(345, 33)
+        cmbG.TabIndex = 20
         ' 
         ' FormGPs
         ' 
@@ -206,7 +205,7 @@ Partial Class FormGPs
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(838, 460)
-        Controls.Add(txtCountryGP)
+        Controls.Add(cmbG)
         Controls.Add(txtNameGP)
         Controls.Add(txtIDGP)
         Controls.Add(lblCountryGP)
@@ -237,5 +236,5 @@ Partial Class FormGPs
     Friend WithEvents lblCountryGP As Label
     Friend WithEvents txtIDGP As TextBox
     Friend WithEvents txtNameGP As TextBox
-    Friend WithEvents txtCountryGP As TextBox
+    Friend WithEvents cmbG As ComboBox
 End Class

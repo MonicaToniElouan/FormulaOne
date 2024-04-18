@@ -4,23 +4,31 @@
     Property drivers As Collection = New Collection
     Property gps As Collection = New Collection
 
+    Private Sub readCountries()
+        Dim c As Country = New Country
+        c.ReadAllCountries()
+        Me.countries = c.CountryDAO.Countries
+    End Sub
     Private Sub btnCountries_Click(sender As Object, e As EventArgs) Handles btnCountries.Click
         Dim form_c As FormCountries = New FormCountries(Me.countries)
         form_c.ShowDialog()
     End Sub
 
     Private Sub btnTeams_Click(sender As Object, e As EventArgs) Handles btnTeams.Click
-        Dim form_t As FormTeams = New FormTeams()
+        readCountries()
+        Dim form_t As FormTeams = New FormTeams(Me.teams, Me.countries)
         form_t.ShowDialog()
     End Sub
 
     Private Sub btnDrivers_Click(sender As Object, e As EventArgs) Handles btnDrivers.Click
-        Dim form_d As FormDrivers = New FormDrivers(Me.drivers)
+        readCountries()
+        Dim form_d As FormDrivers = New FormDrivers(Me.drivers, Me.countries)
         form_d.ShowDialog()
     End Sub
 
     Private Sub btnGPs_Click(sender As Object, e As EventArgs) Handles btnGPs.Click
-        Dim form_g As FormGPs = New FormGPs()
+        readCountries()
+        Dim form_g As FormGPs = New FormGPs(Me.gps, Me.countries)
         form_g.ShowDialog()
     End Sub
 
@@ -40,7 +48,6 @@
             Me.drivers = d.DriverDAO.Drivers
             Me.gps = g.GPDAO.GPs
 
-
             lblResultConnection.Text = "Connection with database SUCCSESSFUL"
             lblResultConnection.ForeColor = Color.Green
             ' Set the new location of the label
@@ -55,10 +62,6 @@
             lblResultConnection.Visible = True
 
         End Try
-    End Sub
-
-    Private Sub pnlModifyData_Paint(sender As Object, e As PaintEventArgs)
-
     End Sub
 
 End Class

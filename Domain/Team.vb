@@ -12,6 +12,14 @@
         Me.TeamID = id
         Me.TeamDAO = New TeamDAO
     End Sub
+
+    Public Sub New(name As String, country As Country, creationDate As Date)
+        Me.TeamName = name
+        Me.TeamCountry = country
+        Me.CreationDate = creationDate
+        Me.TeamDAO = New TeamDAO
+    End Sub
+
     Public Sub New(id As Integer, name As String, country As Country, creationDate As Date)
         Me.TeamID = id
         Me.TeamName = name

@@ -30,7 +30,7 @@
     End Sub
 
     Public Function Insert(ByVal d As Driver) As Integer
-        Return DBBroker.GetBroker.Change("INSERT INTO Drivers VALUES (" & d.DriverID & ", '" & d.DriverName & "', '" & d.DriverSurname & "', '" & d.DriverCountry.CountryID & "');")
+        Return DBBroker.GetBroker.Change("INSERT INTO Drivers(DriverName, DriverSurname, DriverCountry) VALUES ('" & d.DriverName & "', '" & d.DriverSurname & "', '" & d.DriverCountry.CountryID & "');")
     End Function
 
     Public Function Update(ByVal d As Driver) As Integer

@@ -37,8 +37,8 @@ Partial Class FormTeams
         btnInsertD = New Button()
         txtIDT = New TextBox()
         txtNameT = New TextBox()
-        txtCountryT = New TextBox()
-        txtCreationDateT = New TextBox()
+        cmbT = New ComboBox()
+        dtpT = New DateTimePicker()
         pnlSelectOptionT.SuspendLayout()
         SuspendLayout()
         ' 
@@ -203,25 +203,22 @@ Partial Class FormTeams
         txtNameT.Size = New Size(264, 32)
         txtNameT.TabIndex = 15
         ' 
-        ' txtCountryT
+        ' cmbT
         ' 
-        txtCountryT.BackColor = Color.White
-        txtCountryT.Font = New Font("Segoe UI", 14F)
-        txtCountryT.Location = New Point(628, 161)
-        txtCountryT.Margin = New Padding(3, 2, 3, 2)
-        txtCountryT.Name = "txtCountryT"
-        txtCountryT.Size = New Size(264, 32)
-        txtCountryT.TabIndex = 16
+        cmbT.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cmbT.FormattingEnabled = True
+        cmbT.Location = New Point(627, 166)
+        cmbT.Name = "cmbT"
+        cmbT.Size = New Size(264, 33)
+        cmbT.TabIndex = 18
         ' 
-        ' txtCreationDateT
+        ' dtpT
         ' 
-        txtCreationDateT.BackColor = Color.White
-        txtCreationDateT.Font = New Font("Segoe UI", 14F)
-        txtCreationDateT.Location = New Point(628, 211)
-        txtCreationDateT.Margin = New Padding(3, 2, 3, 2)
-        txtCreationDateT.Name = "txtCreationDateT"
-        txtCreationDateT.Size = New Size(264, 32)
-        txtCreationDateT.TabIndex = 17
+        dtpT.CalendarFont = New Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpT.Location = New Point(627, 216)
+        dtpT.Name = "dtpT"
+        dtpT.Size = New Size(265, 23)
+        dtpT.TabIndex = 19
         ' 
         ' FormTeams
         ' 
@@ -229,8 +226,8 @@ Partial Class FormTeams
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(914, 506)
-        Controls.Add(txtCreationDateT)
-        Controls.Add(txtCountryT)
+        Controls.Add(dtpT)
+        Controls.Add(cmbT)
         Controls.Add(txtNameT)
         Controls.Add(txtIDT)
         Controls.Add(pnlSelectOptionT)
@@ -240,6 +237,7 @@ Partial Class FormTeams
         Controls.Add(lblNameT)
         Controls.Add(lblIDT)
         Controls.Add(lblTeams)
+        FormBorderStyle = FormBorderStyle.FixedToolWindow
         Margin = New Padding(3, 2, 3, 2)
         Name = "FormTeams"
         Text = "FormTeams"
@@ -263,6 +261,7 @@ Partial Class FormTeams
     Friend WithEvents btnInsertD As Button
     Friend WithEvents txtIDT As TextBox
     Friend WithEvents txtNameT As TextBox
-    Friend WithEvents txtCountryT As TextBox
     Friend WithEvents txtCreationDateT As TextBox
+    Friend WithEvents cmbT As ComboBox
+    Friend WithEvents dtpT As DateTimePicker
 End Class
