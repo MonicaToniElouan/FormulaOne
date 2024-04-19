@@ -13,6 +13,12 @@
         Me.gpDAO = New GPDAO
     End Sub
 
+    Public Sub New(name As String, country As Country)
+        Me.GPName = name
+        Me.GPCountry = country
+        Me.GPDAO = New GPDAO
+    End Sub
+
     Public Sub New(id As Integer, name As String, country As Country)
         Me.GPID = id
         Me.GPName = name
@@ -41,6 +47,8 @@
         Return Me.GPDAO.Delete(Me)
     End Function
 
-
+    Public Overrides Function ToString() As String
+        Return Me.GPName & " (" & Me.GPCountry.CountryID & ")"
+    End Function
 
 End Class

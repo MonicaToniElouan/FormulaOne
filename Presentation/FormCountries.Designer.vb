@@ -44,7 +44,7 @@ Partial Class FormCountries
         ' 
         lblCountries.AutoSize = True
         lblCountries.BackColor = SystemColors.Window
-        lblCountries.Font = New Font("Times New Roman", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblCountries.Font = New Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblCountries.ForeColor = SystemColors.ActiveCaptionText
         lblCountries.Location = New Point(82, 107)
         lblCountries.Name = "lblCountries"
@@ -78,7 +78,7 @@ Partial Class FormCountries
         ' lblNameC
         ' 
         lblNameC.AutoSize = True
-        lblNameC.Font = New Font("Yu Gothic", 14.0F, FontStyle.Bold)
+        lblNameC.Font = New Font("Yu Gothic", 14F, FontStyle.Bold)
         lblNameC.ForeColor = Color.Black
         lblNameC.Location = New Point(438, 166)
         lblNameC.Name = "lblNameC"
@@ -89,7 +89,7 @@ Partial Class FormCountries
         ' lblPopulationC
         ' 
         lblPopulationC.AutoSize = True
-        lblPopulationC.Font = New Font("Yu Gothic", 14.0F, FontStyle.Bold)
+        lblPopulationC.Font = New Font("Yu Gothic", 14F, FontStyle.Bold)
         lblPopulationC.ForeColor = Color.Black
         lblPopulationC.Location = New Point(438, 207)
         lblPopulationC.Name = "lblPopulationC"
@@ -100,7 +100,7 @@ Partial Class FormCountries
         ' txtIDC
         ' 
         txtIDC.BackColor = Color.White
-        txtIDC.Font = New Font("Segoe UI", 14.0F)
+        txtIDC.Font = New Font("Segoe UI", 14F)
         txtIDC.Location = New Point(617, 113)
         txtIDC.Margin = New Padding(3, 2, 3, 2)
         txtIDC.Name = "txtIDC"
@@ -110,7 +110,7 @@ Partial Class FormCountries
         ' txtNameC
         ' 
         txtNameC.BackColor = Color.White
-        txtNameC.Font = New Font("Segoe UI", 14.0F)
+        txtNameC.Font = New Font("Segoe UI", 14F)
         txtNameC.Location = New Point(617, 160)
         txtNameC.Margin = New Padding(3, 2, 3, 2)
         txtNameC.Name = "txtNameC"
@@ -120,7 +120,7 @@ Partial Class FormCountries
         ' txtPopulationC
         ' 
         txtPopulationC.BackColor = Color.White
-        txtPopulationC.Font = New Font("Segoe UI", 14.0F)
+        txtPopulationC.Font = New Font("Segoe UI", 14F)
         txtPopulationC.Location = New Point(617, 201)
         txtPopulationC.Margin = New Padding(3, 2, 3, 2)
         txtPopulationC.Name = "txtPopulationC"
@@ -198,7 +198,7 @@ Partial Class FormCountries
         ' 
         ' FormCountries
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(960, 539)

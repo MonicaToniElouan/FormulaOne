@@ -39,6 +39,9 @@
         Return Me.CountryDAO.Delete(Me)
     End Function
 
+    Public Overrides Function ToString() As String
+        Return Me.CountryID & " --> " & Me.CountryName
+    End Function
 
 
 End Class

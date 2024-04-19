@@ -11,7 +11,6 @@ Public Class DBBroker
     End Sub
 
     Public Shared Function GetBroker() As DBBroker
-
         If DBBroker._Instance Is Nothing Then
             DBBroker._Instance = New DBBroker
         End If

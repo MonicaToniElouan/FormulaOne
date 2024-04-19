@@ -34,7 +34,7 @@
     End Function
 
     Public Function Update(ByVal d As Driver) As Integer
-        Return DBBroker.GetBroker.Change("UPDATE Drivers SET DriverName='" & d.DriverName & "', DriverSurname='" & d.DriverSurname & "', DriverCountry='" & d.DriverCountry.CountryID & "' WHERE DriverID='" & d.DriverID & "';")
+        Return DBBroker.GetBroker.Change("UPDATE Drivers SET DriverName='" & d.DriverName & "', DriverSurname='" & d.DriverSurname & "', DriverCountry='" & d.DriverCountry.CountryID & "' WHERE DriverID=" & d.DriverID & ";")
     End Function
 
     Public Function Delete(ByVal d As Driver) As Integer

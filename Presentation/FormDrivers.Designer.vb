@@ -239,6 +239,7 @@ Partial Class FormDrivers
         Controls.Add(lblNameD)
         Controls.Add(lstDrivers)
         Controls.Add(lblDrivers)
+        FormBorderStyle = FormBorderStyle.FixedToolWindow
         Margin = New Padding(3, 2, 3, 2)
         Name = "FormDrivers"
         Text = "FormDrivers"
