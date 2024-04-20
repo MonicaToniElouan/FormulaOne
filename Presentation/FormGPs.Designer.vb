@@ -192,6 +192,7 @@ Partial Class FormGPs
         ' 
         ' cmbG
         ' 
+        cmbG.DropDownStyle = ComboBoxStyle.DropDownList
         cmbG.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cmbG.FormattingEnabled = True
         cmbG.Location = New Point(483, 161)

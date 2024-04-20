@@ -3,6 +3,7 @@
     Public Property TeamName As String
     Public Property TeamCountry As Country
     Public Property CreationDate As Date
+    Public Property drivers As Collection
     Public ReadOnly Property TeamDAO As TeamDAO
 
     Public Sub New()
@@ -25,6 +26,7 @@
         Me.TeamName = name
         Me.TeamCountry = country
         Me.CreationDate = creationDate
+        Me.drivers = New Collection
         Me.TeamDAO = New TeamDAO
     End Sub
 
@@ -37,6 +39,9 @@
         Return Me
     End Function
 
+    Public Sub PickRandomTeams(amount As Integer)
+        Me.TeamDAO.PickRandom(amount)
+    End Sub
     Public Function InsertTeam()
         Return Me.TeamDAO.Insert(Me)
     End Function

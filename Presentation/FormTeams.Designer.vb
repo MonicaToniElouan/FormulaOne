@@ -205,6 +205,7 @@ Partial Class FormTeams
         ' 
         ' cmbT
         ' 
+        cmbT.DropDownStyle = ComboBoxStyle.DropDownList
         cmbT.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cmbT.FormattingEnabled = True
         cmbT.Location = New Point(627, 166)

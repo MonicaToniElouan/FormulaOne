@@ -9,9 +9,10 @@
     End Sub
     Private Sub FormGPs_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtIDGP.ReadOnly = True
+        cmbG.Items.Add("")
         Try
             For Each aux In Me.gps
-                lstGP.Items.Add(aux.GPName)
+                lstGP.Items.Add(aux)
             Next
             For Each aux In Me.countries
                 cmbG.Items.Add(aux.CountryID)
@@ -54,9 +55,11 @@
 
     Private Sub lstGP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstGP.SelectedIndexChanged
         Dim g As GP = lstGP.SelectedItem
-        txtIDGP.Text = g.GPID
-        txtNameGP.Text = g.GPName
-        cmbG.Text = g.GPCountry.CountryID
+        If Not g Is Nothing Then
+            txtIDGP.Text = g.GPID
+            txtNameGP.Text = g.GPName
+            cmbG.Text = g.GPCountry.CountryID
+        End If
     End Sub
 
     Private Sub btnDeleteGP_Click(sender As Object, e As EventArgs) Handles btnDeleteGP.Click
@@ -84,11 +87,11 @@
     End Sub
 
     Private Sub btnUpdateGP_Click(sender As Object, e As EventArgs) Handles btnUpdateGP.Click
-        Dim g As Driver
+        Dim g As GP
         If checkIfCorrectData(txtNameGP.Text, cmbG.Text) And checkID(txtIDGP.Text) Then
             Try
-                g = New Driver(txtIDGP.Text, txtNameGP.Text, New Country(cmbG.Text))
-                g.UpdateDriver()
+                g = New GP(txtIDGP.Text, txtNameGP.Text, New Country(cmbG.Text))
+                g.UpdateGP()
                 updateGP(g)
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
@@ -107,5 +110,11 @@
             End If
             counter = counter + 1
         Next
+    End Sub
+
+    Private Sub btnClearGP_Click(sender As Object, e As EventArgs) Handles btnClearGP.Click
+        txtIDGP.Text = ""
+        txtNameGP.Text = ""
+        cmbG.Text = ""
     End Sub
 End Class

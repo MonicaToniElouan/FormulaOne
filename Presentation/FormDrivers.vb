@@ -7,12 +7,10 @@
         Me.countries = c
         InitializeComponent()
     End Sub
-    Private Sub lblCountries_Click(sender As Object, e As EventArgs) Handles lblDrivers.Click
-
-    End Sub
 
     Private Sub FormDrivers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtIDD.ReadOnly = True
+        cmbD.Items.Add("")
         Try
             For Each d In Me.drivers
                 lstDrivers.Items.Add(d)
@@ -43,10 +41,12 @@
 
     Private Sub lstDrivers_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstDrivers.SelectedIndexChanged
         Dim d As Driver = lstDrivers.SelectedItem
-        txtIDD.Text = d.DriverID
-        txtNameD.Text = d.DriverName
-        txtSurnameD.Text = d.DriverSurname
-        cmbD.Text = d.DriverCountry.CountryID
+        If Not d Is Nothing Then
+            txtIDD.Text = d.DriverID
+            txtNameD.Text = d.DriverName
+            txtSurnameD.Text = d.DriverSurname
+            cmbD.Text = d.DriverCountry.CountryID
+        End If
     End Sub
 
     Private Sub btnClearD_Click(sender As Object, e As EventArgs) Handles btnClearD.Click

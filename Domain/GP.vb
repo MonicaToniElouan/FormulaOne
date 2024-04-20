@@ -35,6 +35,10 @@
         Return Me
     End Function
 
+    Public Sub PickRandomGPs(amount As Integer)
+        Me.GPDAO.PickRandom(amount)
+    End Sub
+
     Public Function InsertGP()
         Return Me.GPDAO.Insert(Me)
     End Function

@@ -4,14 +4,11 @@
     Public Sub New(t As Collection, c As Collection)
         Me.teams = t
         Me.countries = c
-        ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
-
-        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-
     End Sub
     Private Sub FormTeams_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtIDT.ReadOnly = True
+        cmbT.Items.Add("")
         Try
             lstTeams.DataSource = Me.teams
             For Each aux In Me.countries
@@ -46,11 +43,12 @@
 
     Private Sub lstTeams_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstTeams.SelectedIndexChanged
         Dim t As Team = lstTeams.SelectedItem
-        txtIDT.Text = t.TeamID
-        txtNameT.Text = t.TeamName
-        cmbT.Text = t.TeamCountry.CountryID
-        dtpT.Text = t.CreationDate
-
+        If Not t Is Nothing Then
+            txtIDT.Text = t.TeamID
+            txtNameT.Text = t.TeamName
+            cmbT.Text = t.TeamCountry.CountryID
+            dtpT.Text = t.CreationDate
+        End If
     End Sub
 
     Private Sub btnDeleteD_Click(sender As Object, e As EventArgs) Handles btnDeleteD.Click

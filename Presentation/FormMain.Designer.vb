@@ -32,6 +32,7 @@ Partial Class FormMain
         lblWelcome = New Label()
         lblResultConnection = New Label()
         pnlConn = New Panel()
+        btnGenSeason = New Button()
         pnlModifyData.SuspendLayout()
         pnlConn.SuspendLayout()
         SuspendLayout()
@@ -128,12 +129,23 @@ Partial Class FormMain
         pnlConn.Size = New Size(676, 43)
         pnlConn.TabIndex = 4
         ' 
+        ' btnGenSeason
+        ' 
+        btnGenSeason.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnGenSeason.Location = New Point(286, 149)
+        btnGenSeason.Name = "btnGenSeason"
+        btnGenSeason.Size = New Size(219, 55)
+        btnGenSeason.TabIndex = 7
+        btnGenSeason.Text = "Generate Season"
+        btnGenSeason.UseVisualStyleBackColor = True
+        ' 
         ' FormMain
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(769, 366)
+        Controls.Add(btnGenSeason)
         Controls.Add(pnlModifyData)
         Controls.Add(pnlConn)
         Controls.Add(lblWelcome)
@@ -154,5 +166,6 @@ Partial Class FormMain
     Friend WithEvents lblWelcome As Label
     Friend WithEvents lblResultConnection As Label
     Friend WithEvents pnlConn As Panel
+    Friend WithEvents btnGenSeason As Button
 
 End Class

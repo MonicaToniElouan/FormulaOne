@@ -31,6 +31,18 @@ Public Class TeamDAO
         Next
     End Sub
 
+    Public Sub PickRandom(ByVal amount As Integer)
+        Dim t As Team
+        Dim c As Country
+        Dim col, aux As Collection
+        col = DBBroker.GetBroker().Read("SELECT * FROM Teams ORDER BY RAND() LIMIT " & amount & ";")
+        For Each aux In col
+            c = New Country(aux(3).ToString)
+            t = New Team(aux(1).ToString, aux(2).ToString, c.ReadCountry(), Date.Parse(aux(4).ToString))
+            Me.Teams.Add(t)
+        Next
+    End Sub
+
     Public Function Insert(ByVal t As Team) As Integer
         Return DBBroker.GetBroker.Change("INSERT INTO Teams VALUES (" & t.TeamID & ", '" & t.TeamName & "', '" & t.TeamCountry.CountryID & "', '" & t.CreationDate.ToString("yyyy-MM-dd") & "');")
     End Function

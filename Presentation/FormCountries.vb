@@ -43,9 +43,11 @@ Public Class FormCountries
 
     Private Sub lstCountries_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstCountries.SelectedIndexChanged
         Dim c As Country = lstCountries.SelectedItem
-        txtIDC.Text = c.CountryID
-        txtNameC.Text = c.CountryName
-        txtPopulationC.Text = c.CountryPopulation
+        If Not c Is Nothing Then
+            txtIDC.Text = c.CountryID
+            txtNameC.Text = c.CountryName
+            txtPopulationC.Text = c.CountryPopulation
+        End If
     End Sub
 
     Private Function checkIfIdAvailable(id As String) As Boolean

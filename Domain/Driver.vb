@@ -3,6 +3,7 @@
     Public Property DriverName As String
     Public Property DriverSurname As String
     Public Property DriverCountry As Country
+    Public Property DriverTeam As Team
     Public ReadOnly Property DriverDAO As DriverDAO
 
     Public Sub New()
@@ -38,6 +39,9 @@
         Return Me
     End Function
 
+    Public Sub PickRandomDrivers(amount As Integer)
+        Me.DriverDAO.PickRandom(amount)
+    End Sub
     Public Function InsertDriver()
         Return Me.DriverDAO.Insert(Me)
     End Function

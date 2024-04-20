@@ -215,6 +215,7 @@ Partial Class FormDrivers
         ' 
         ' cmbD
         ' 
+        cmbD.DropDownStyle = ComboBoxStyle.DropDownList
         cmbD.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cmbD.FormattingEnabled = True
         cmbD.Location = New Point(565, 193)

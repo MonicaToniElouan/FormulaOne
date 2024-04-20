@@ -29,6 +29,18 @@
         Next
     End Sub
 
+    Public Sub PickRandom(ByVal amount As Integer)
+        Dim d As Driver
+        Dim c As Country
+        Dim col, aux As Collection
+        col = DBBroker.GetBroker().Read("SELECT * FROM Drivers ORDER BY RAND() LIMIT " & amount & ";")
+        For Each aux In col
+            c = New Country(aux(4).ToString)
+            d = New Driver(aux(1).ToString, aux(2).ToString, aux(3).ToString, c.ReadCountry())
+            Me.Drivers.Add(d)
+        Next
+    End Sub
+
     Public Function Insert(ByVal d As Driver) As Integer
         Return DBBroker.GetBroker.Change("INSERT INTO Drivers(DriverName, DriverSurname, DriverCountry) VALUES ('" & d.DriverName & "', '" & d.DriverSurname & "', '" & d.DriverCountry.CountryID & "');")
     End Function
@@ -40,4 +52,6 @@
     Public Function Delete(ByVal d As Driver) As Integer
         Return DBBroker.GetBroker.Change("DELETE FROM Drivers WHERE DriverID=" & d.DriverID & ";")
     End Function
+
+
 End Class
