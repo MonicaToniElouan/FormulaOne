@@ -10,10 +10,14 @@
         txtIDT.ReadOnly = True
         cmbT.Items.Add("")
         Try
-            lstTeams.DataSource = Me.teams
+            For Each aux In Me.teams
+                lstTeams.Items.Add(aux)
+            Next
+
             For Each aux In Me.countries
                 cmbT.Items.Add(aux.CountryID)
             Next
+
             lstTeams.ValueMember = "TeamName"
 
         Catch ex As Exception
@@ -22,7 +26,7 @@
     End Sub
 
     Private Sub btnInsertD_Click(sender As Object, e As EventArgs) Handles btnInsertD.Click
-        If checkIfCorrectData(txtNameT.Text, cmbT.Text, txtCreationDateT.Text) Then
+        If checkIfCorrectData(txtNameT.Text, cmbT.Text, dtpT.Text) Then
             Try
                 Dim t As Team = New Team(txtNameT.Text, New Country(cmbT.Text), Date.Parse(dtpT.Text))
                 t.InsertTeam()

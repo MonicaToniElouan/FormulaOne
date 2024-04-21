@@ -3,7 +3,6 @@
     Public Property DriverName As String
     Public Property DriverSurname As String
     Public Property DriverCountry As Country
-    Public Property DriverTeam As Team
     Public ReadOnly Property DriverDAO As DriverDAO
 
     Public Sub New()

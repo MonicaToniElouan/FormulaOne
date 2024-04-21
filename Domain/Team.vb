@@ -3,7 +3,6 @@
     Public Property TeamName As String
     Public Property TeamCountry As Country
     Public Property CreationDate As Date
-    Public Property drivers As Collection
     Public ReadOnly Property TeamDAO As TeamDAO
 
     Public Sub New()
@@ -26,7 +25,6 @@
         Me.TeamName = name
         Me.TeamCountry = country
         Me.CreationDate = creationDate
-        Me.drivers = New Collection
         Me.TeamDAO = New TeamDAO
     End Sub
 
